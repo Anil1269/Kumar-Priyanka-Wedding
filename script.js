@@ -17,20 +17,6 @@ if (invitation) {
 COUPLE PHOTO SLIDESHOW
 ========================= */
 
-/*
-Add your photos later inside:
-
-images/
-
-with these names:
-
-couple1.jpg
-couple2.jpg
-couple3.jpg
-couple4.jpg
-couple5.jpg
-*/
-
 const photos = [
 "images/couple1.jpg",
 "images/couple2.jpg",
@@ -45,23 +31,16 @@ let currentPhoto = 0;
 ELEMENTS
 ========================= */
 
-const photoContainer =
-document.querySelector(".story-photo");
-
-const photoNumber =
-document.getElementById("photoNumber");
-
-const totalPhotos =
-document.getElementById("totalPhotos");
+const photoContainer = document.querySelector(".story-photo");
+const photoNumber = document.getElementById("photoNumber");
+const totalPhotos = document.getElementById("totalPhotos");
 
 /* =========================
 TOTAL PHOTOS
 ========================= */
 
 if (totalPhotos) {
-
 totalPhotos.textContent = photos.length;
-
 }
 
 /* =========================
@@ -73,15 +52,11 @@ function changePhoto(direction) {
 currentPhoto += direction;
 
 if (currentPhoto < 0) {
-
     currentPhoto = photos.length - 1;
-
 }
 
 if (currentPhoto >= photos.length) {
-
     currentPhoto = 0;
-
 }
 
 showPhoto();
@@ -95,9 +70,7 @@ SHOW PHOTO
 function showPhoto() {
 
 if (!photoContainer) {
-
     return;
-
 }
 
 photoContainer.innerHTML = `
@@ -105,40 +78,24 @@ photoContainer.innerHTML = `
         src="${photos[currentPhoto]}"
         alt="Kumar & Priyanka"
         class="story-photo-image"
+        onerror="showPlaceholder()"
     >
 `;
 
-const image =
-    photoContainer.querySelector("img");
-
-if (image) {
-
-    image.addEventListener(
-        "error",
-        handleImageError
-    );
-
-}
-
 if (photoNumber) {
-
-    photoNumber.textContent =
-        currentPhoto + 1;
-
+    photoNumber.textContent = currentPhoto + 1;
 }
 
 }
 
 /* =========================
-MISSING PHOTO
+SHOW PLACEHOLDER
 ========================= */
 
-function handleImageError() {
+function showPlaceholder() {
 
 if (!photoContainer) {
-
     return;
-
 }
 
 photoContainer.innerHTML = `
@@ -149,28 +106,30 @@ photoContainer.innerHTML = `
     </div>
 `;
 
+if (photoNumber) {
+    photoNumber.textContent = currentPhoto + 1;
 }
+
+}
+
+/* =========================
+INITIAL PHOTO
+========================= */
+
+showPlaceholder();
 
 /* =========================
 KEYBOARD NAVIGATION
 ========================= */
 
-document.addEventListener(
-"keydown",
-function (event) {
+document.addEventListener("keydown", function (event) {
 
-    if (event.key === "ArrowLeft") {
-
-        changePhoto(-1);
-
-    }
-
-    if (event.key === "ArrowRight") {
-
-        changePhoto(1);
-
-    }
-
+if (event.key === "ArrowLeft") {
+    changePhoto(-1);
 }
 
-);
+if (event.key === "ArrowRight") {
+    changePhoto(1);
+}
+
+});
