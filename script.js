@@ -1,28 +1,28 @@
 function openInvitation() {
-    const invitation = document.getElementById("invitation");
 
-    if (invitation) {
-        invitation.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    }
+const invitation = document.getElementById("invitation");
+
+if (invitation) {
+
+    invitation.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
 }
 
+}
 
-/* =========================================
-Wedding Website - JavaScript
-Kumar & Priyanka
-========================================= */
-
-/* =========================================
-Couple Photo Slideshow
-========================================= */
+/* =========================
+COUPLE PHOTO SLIDESHOW
+========================= */
 
 /*
-Photos will be added later.
+Add your photos later inside:
 
-Create an "images" folder and add:
+images/
+
+with these names:
 
 couple1.jpg
 couple2.jpg
@@ -41,9 +41,9 @@ const photos = [
 
 let currentPhoto = 0;
 
-/* =========================================
-Get Elements
-========================================= */
+/* =========================
+ELEMENTS
+========================= */
 
 const photoContainer =
 document.querySelector(".story-photo");
@@ -54,29 +54,23 @@ document.getElementById("photoNumber");
 const totalPhotos =
 document.getElementById("totalPhotos");
 
-/* =========================================
-Total Photos
-========================================= */
+/* =========================
+TOTAL PHOTOS
+========================= */
 
 if (totalPhotos) {
 
-```
 totalPhotos.textContent = photos.length;
-```
 
 }
 
-/* =========================================
-Change Photo
-========================================= */
+/* =========================
+CHANGE PHOTO
+========================= */
 
 function changePhoto(direction) {
 
-```
 currentPhoto += direction;
-
-
-/* Previous from first photo */
 
 if (currentPhoto < 0) {
 
@@ -84,34 +78,27 @@ if (currentPhoto < 0) {
 
 }
 
-
-/* Next from last photo */
-
 if (currentPhoto >= photos.length) {
 
     currentPhoto = 0;
 
 }
 
-
 showPhoto();
-```
 
 }
 
-/* =========================================
-Show Photo
-========================================= */
+/* =========================
+SHOW PHOTO
+========================= */
 
 function showPhoto() {
 
-```
 if (!photoContainer) {
 
     return;
 
 }
-
 
 photoContainer.innerHTML = `
     <img
@@ -121,6 +108,17 @@ photoContainer.innerHTML = `
     >
 `;
 
+const image =
+    photoContainer.querySelector("img");
+
+if (image) {
+
+    image.addEventListener(
+        "error",
+        handleImageError
+    );
+
+}
 
 if (photoNumber) {
 
@@ -128,23 +126,20 @@ if (photoNumber) {
         currentPhoto + 1;
 
 }
-```
 
 }
 
-/* =========================================
-Missing Photo Handling
-========================================= */
+/* =========================
+MISSING PHOTO
+========================= */
 
 function handleImageError() {
 
-```
 if (!photoContainer) {
 
     return;
 
 }
-
 
 photoContainer.innerHTML = `
     <div class="story-photo-placeholder">
@@ -154,56 +149,21 @@ photoContainer.innerHTML = `
     </div>
 `;
 
-
-if (photoNumber) {
-
-    photoNumber.textContent =
-        currentPhoto + 1;
-
-}
-```
-
 }
 
-/* =========================================
-Detect Image Loading Errors
-========================================= */
-
-if (photoContainer) {
-
-```
-photoContainer.addEventListener(
-    "error",
-    function (event) {
-
-        if (event.target.tagName === "IMG") {
-
-            handleImageError();
-
-        }
-
-    },
-    true
-);
-```
-
-}
-
-/* =========================================
-Keyboard Navigation
-========================================= */
+/* =========================
+KEYBOARD NAVIGATION
+========================= */
 
 document.addEventListener(
 "keydown",
 function (event) {
 
-```
     if (event.key === "ArrowLeft") {
 
         changePhoto(-1);
 
     }
-
 
     if (event.key === "ArrowRight") {
 
@@ -212,7 +172,5 @@ function (event) {
     }
 
 }
-```
 
 );
-
