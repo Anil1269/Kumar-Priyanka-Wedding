@@ -13,9 +13,12 @@ html {
 body {
     margin: 0;
     padding: 0;
+
     background: #faf7f1;
     color: #3f3934;
+
     font-family: 'Montserrat', sans-serif;
+
     overflow-x: hidden;
 }
 
@@ -39,13 +42,15 @@ h3 {
 
     display: flex;
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
 
     position: relative;
+
     text-align: center;
 
-    padding: 60px 20px;
+    padding: 70px 20px;
 
     background:
         radial-gradient(
@@ -60,16 +65,20 @@ h3 {
 }
 
 
-/* Decorative circles */
+/* =========================================
+   HERO DECORATIVE CIRCLES
+   ========================================= */
 
 .hero::before {
     content: "";
+
     position: absolute;
 
     width: 600px;
     height: 600px;
 
     border: 1px solid rgba(130, 91, 65, 0.12);
+
     border-radius: 50%;
 
     top: 50%;
@@ -82,12 +91,14 @@ h3 {
 
 .hero::after {
     content: "";
+
     position: absolute;
 
     width: 850px;
     height: 850px;
 
     border: 1px solid rgba(130, 91, 65, 0.07);
+
     border-radius: 50%;
 
     top: 50%;
@@ -105,40 +116,57 @@ h3 {
 
 .hero-content {
     max-width: 800px;
+
     width: 100%;
 
     position: relative;
-    z-index: 2;
+
+    z-index: 5;
 }
 
 
 /* =========================================
-   DECORATIONS
+   HERO DECORATIONS
    ========================================= */
 
 .decor {
     position: absolute;
 
     font-family: 'Cormorant Garamond', serif;
-    font-size: 35px;
 
-    opacity: 0.45;
+    font-size: 30px;
+
+    color: #806653;
+
+    opacity: 0.38;
 
     z-index: 2;
+
+    pointer-events: none;
 }
 
-.decor-top {
-    top: 45px;
-    left: 50%;
-
-    transform: translateX(-50%);
+.decor-top-left {
+    top: 80px;
+    left: 10%;
 }
 
-.decor-bottom {
-    bottom: 55px;
-    left: 50%;
+.decor-top-right {
+    top: 120px;
+    right: 10%;
 
-    transform: translateX(-50%);
+    font-size: 25px;
+}
+
+.decor-bottom-left {
+    bottom: 110px;
+    left: 12%;
+
+    font-size: 24px;
+}
+
+.decor-bottom-right {
+    bottom: 90px;
+    right: 12%;
 }
 
 
@@ -147,12 +175,14 @@ h3 {
    ========================================= */
 
 .eyebrow {
-    margin: 0 0 25px;
+    margin: 0 0 22px;
 
     font-size: 11px;
+
     font-weight: 500;
 
     letter-spacing: 4px;
+
     text-transform: uppercase;
 }
 
@@ -184,12 +214,29 @@ h3 {
     font-style: italic;
 }
 
+
+/* =========================================
+   HERO SUBTITLE
+   ========================================= */
+
+.hero-subtitle {
+    margin: 30px auto 10px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 23px;
+
+    font-style: italic;
+
+    color: #765f4d;
+}
+
 .intro {
     max-width: 550px;
 
-    margin: 40px auto;
+    margin: 18px auto 35px;
 
-    font-size: 14px;
+    font-size: 13px;
 
     line-height: 1.9;
 }
@@ -205,15 +252,17 @@ h3 {
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     min-width: 280px;
 
     padding: 22px 35px;
 
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
     border-top: 1px solid rgba(63, 57, 52, 0.25);
+
     border-bottom: 1px solid rgba(63, 57, 52, 0.25);
 
     background: rgba(255, 255, 255, 0.18);
@@ -276,10 +325,13 @@ h3 {
 
 .open-button {
     display: flex;
+
     width: fit-content;
+
     margin: 0 auto;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 12px;
@@ -315,6 +367,23 @@ h3 {
 
 
 /* =========================================
+   HERO FOOTER
+   ========================================= */
+
+.hero-footer-text {
+    margin: 25px 0 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
    SCROLL TEXT
    ========================================= */
 
@@ -333,7 +402,9 @@ h3 {
 
     opacity: 0.55;
 
-    z-index: 2;
+    z-index: 5;
+
+    white-space: nowrap;
 }
 
 
@@ -406,11 +477,25 @@ h3 {
 .message {
     max-width: 650px;
 
-    margin: 30px auto 70px;
+    margin: 30px auto 25px;
 
     font-size: 14px;
 
     line-height: 1.9;
+}
+
+.blessing-text {
+    max-width: 550px;
+
+    margin: 0 auto 70px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    color: #765f4d;
 }
 
 
@@ -422,13 +507,14 @@ h3 {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 45px;
 
     max-width: 900px;
 
-    margin: 0 auto 100px;
+    margin: 0 auto 90px;
 }
 
 .person-card {
@@ -451,6 +537,7 @@ h3 {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     background:
@@ -498,6 +585,35 @@ h3 {
     font-style: italic;
 
     color: #806653;
+}
+
+
+/* =========================================
+   EVENTS INTRO
+   ========================================= */
+
+.events-intro {
+    margin: 0 auto 35px;
+
+    max-width: 600px;
+
+    text-align: center;
+}
+
+.events-intro .section-label {
+    margin-bottom: 10px;
+}
+
+.events-intro p:last-child {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    color: #765f4d;
 }
 
 
@@ -609,6 +725,7 @@ h3 {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     background:
@@ -660,23 +777,45 @@ h3 {
         );
 
     border-top: 1px solid rgba(130, 91, 65, 0.12);
+
+    overflow: hidden;
 }
 
-.story-section::before {
-    content: "✦";
 
+/* =========================================
+   STORY DECORATIONS
+   ========================================= */
+
+.story-decoration {
     position: absolute;
 
-    top: 35px;
+    color: #806653;
 
-    left: 50%;
+    font-family: 'Cormorant Garamond', serif;
 
-    transform: translateX(-50%);
-
-    font-size: 18px;
+    font-size: 28px;
 
     opacity: 0.3;
+
+    pointer-events: none;
 }
+
+.story-decoration-left {
+    left: 8%;
+
+    top: 80px;
+}
+
+.story-decoration-right {
+    right: 8%;
+
+    top: 80px;
+}
+
+
+/* =========================================
+   STORY TEXT
+   ========================================= */
 
 .story-message {
     max-width: 600px;
@@ -697,6 +836,7 @@ h3 {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 25px;
@@ -724,6 +864,7 @@ h3 {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     background:
@@ -780,6 +921,7 @@ h3 {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     transition: 0.3s;
@@ -812,6 +954,18 @@ h3 {
     opacity: 0.65;
 }
 
+.story-footer {
+    margin: 28px 0 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #765f4d;
+}
+
 
 /* =========================================
    TABLET
@@ -839,7 +993,7 @@ h3 {
 @media (max-width: 700px) {
 
     .hero {
-        padding: 50px 18px;
+        padding: 55px 18px;
     }
 
     .hero::before {
@@ -856,16 +1010,46 @@ h3 {
         font-size: 65px;
     }
 
+    .hero-subtitle {
+        font-size: 20px;
+
+        margin-top: 25px;
+    }
+
     .intro {
         font-size: 13px;
 
-        margin: 30px auto;
+        margin: 15px auto 30px;
     }
 
     .date-card {
         min-width: 250px;
 
         padding: 20px 25px;
+    }
+
+    .hero-footer-text {
+        font-size: 16px;
+    }
+
+    .decor-top-left {
+        top: 65px;
+        left: 6%;
+    }
+
+    .decor-top-right {
+        top: 90px;
+        right: 6%;
+    }
+
+    .decor-bottom-left {
+        bottom: 90px;
+        left: 7%;
+    }
+
+    .decor-bottom-right {
+        bottom: 75px;
+        right: 7%;
     }
 
 
@@ -876,9 +1060,15 @@ h3 {
     }
 
     .message {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
 
         font-size: 13px;
+    }
+
+    .blessing-text {
+        margin-bottom: 55px;
+
+        font-size: 17px;
     }
 
 
@@ -889,7 +1079,7 @@ h3 {
 
         gap: 25px;
 
-        margin-bottom: 70px;
+        margin-bottom: 65px;
     }
 
     .person-card {
@@ -913,6 +1103,14 @@ h3 {
 
     /* Events */
 
+    .events-intro {
+        margin-bottom: 30px;
+    }
+
+    .events-intro p:last-child {
+        font-size: 17px;
+    }
+
     .event-card {
         padding: 35px 20px;
     }
@@ -922,6 +1120,18 @@ h3 {
 
     .story-section {
         padding: 70px 10px 60px;
+    }
+
+    .story-decoration-left {
+        left: 4%;
+
+        top: 60px;
+    }
+
+    .story-decoration-right {
+        right: 4%;
+
+        top: 60px;
     }
 
     .story-message {
@@ -962,6 +1172,10 @@ h3 {
 
     .hero h1 {
         font-size: 56px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
     }
 
     .date-card {
