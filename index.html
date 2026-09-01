@@ -21,16 +21,23 @@
 <body>
 
 ```
-<!-- Opening Section -->
+<!-- ================================
+     Opening Section
+     ================================ -->
+
 <section class="hero">
 
     <div class="decor decor-top">✦</div>
 
     <div class="hero-content">
 
-        <p class="eyebrow">WE ARE GETTING MARRIED</p>
+        <p class="eyebrow">
+            WE ARE GETTING MARRIED
+        </p>
 
-        <div class="ornament">✦</div>
+        <div class="ornament">
+            ✦
+        </div>
 
         <h1>
             Kumar
@@ -50,12 +57,14 @@
             </div>
 
             <div class="date">
+
                 <span>05</span>
 
                 <div>
                     <strong>SEPTEMBER</strong>
                     <small>2026</small>
                 </div>
+
             </div>
 
             <div class="time">
@@ -71,7 +80,9 @@
 
     </div>
 
-    <div class="decor decor-bottom">✦</div>
+    <div class="decor decor-bottom">
+        ✦
+    </div>
 
     <div class="scroll-text">
         A beautiful beginning awaits
@@ -80,7 +91,10 @@
 </section>
 
 
-<!-- Invitation Section -->
+<!-- ================================
+     Invitation Section
+     ================================ -->
+
 <section id="invitation" class="invitation">
 
     <p class="section-label">
@@ -98,7 +112,9 @@
     </p>
 
 
-    <!-- Bride & Groom Section -->
+    <!-- ================================
+         Bride & Groom
+         ================================ -->
 
     <div class="couple-section">
 
@@ -123,7 +139,7 @@
         </div>
 
 
-        <!-- & -->
+        <!-- Couple Symbol -->
 
         <div class="couple-symbol">
             &amp;
@@ -153,7 +169,9 @@
     </div>
 
 
-    <!-- Events -->
+    <!-- ================================
+         Events
+         ================================ -->
 
     <div class="events">
 
@@ -279,8 +297,67 @@
 
     </div>
 
+
+    <!-- ================================
+         Our Story / Couple Photos
+         Final Section
+         ================================ -->
+
+    <section class="story-section">
+
+        <p class="section-label">
+            OUR STORY
+        </p>
+
+        <h2>
+            Moments <span>&amp;</span> Memories
+        </h2>
+
+        <p class="story-message">
+            A few beautiful moments from our journey together.
+        </p>
+
+        <div class="photo-slider">
+
+            <button
+                class="slider-arrow prev"
+                onclick="changePhoto(-1)"
+                aria-label="Previous photo">
+                &#10094;
+            </button>
+
+
+            <div class="story-photo">
+
+                <div class="story-photo-placeholder">
+                    <span>COUPLE PHOTO 1</span>
+                </div>
+
+            </div>
+
+
+            <button
+                class="slider-arrow next"
+                onclick="changePhoto(1)"
+                aria-label="Next photo">
+                &#10095;
+            </button>
+
+        </div>
+
+
+        <div class="photo-counter">
+            <span id="photoNumber">1</span>
+            /
+            <span id="totalPhotos">5</span>
+        </div>
+
+    </section>
+
 </section>
 
+
+<!-- JavaScript -->
 
 <script src="script.js"></script>
 ```
