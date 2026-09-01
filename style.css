@@ -13,12 +13,9 @@ html {
 body {
     margin: 0;
     padding: 0;
-
-    background: #faf7f1;
-    color: #3f3934;
-
+    background: #f8f0e7;
+    color: #40362f;
     font-family: 'Montserrat', sans-serif;
-
     overflow-x: hidden;
 }
 
@@ -42,69 +39,59 @@ h3 {
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
 
     position: relative;
-
     text-align: center;
 
-    padding: 70px 20px;
+    padding: 60px 20px;
 
     background:
         radial-gradient(
-            circle at 50% 45%,
+            circle at 50% 35%,
             #fffdf9 0%,
-            #faf4eb 42%,
-            #f0e3d2 75%,
-            #e8d7c3 100%
+            #f9eee5 38%,
+            #efdcd0 72%,
+            #e5cbbd 100%
         );
 
     overflow: hidden;
 }
 
 
-/* =========================================
-   HERO DECORATIVE CIRCLES
-   ========================================= */
+/* Soft decorative frame */
 
 .hero::before {
     content: "";
-
     position: absolute;
 
-    width: 600px;
-    height: 600px;
+    width: calc(100% - 70px);
+    height: calc(100% - 70px);
 
-    border: 1px solid rgba(130, 91, 65, 0.12);
+    top: 35px;
+    left: 35px;
 
-    border-radius: 50%;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
+    border: 1px solid rgba(126, 86, 65, 0.12);
 
     pointer-events: none;
 }
 
 .hero::after {
-    content: "";
+    content: "❦";
 
     position: absolute;
 
-    width: 850px;
-    height: 850px;
-
-    border: 1px solid rgba(130, 91, 65, 0.07);
-
-    border-radius: 50%;
-
-    top: 50%;
+    bottom: 45px;
     left: 50%;
 
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+
+    color: #9b7661;
+    opacity: 0.35;
 
     pointer-events: none;
 }
@@ -116,57 +103,38 @@ h3 {
 
 .hero-content {
     max-width: 800px;
-
     width: 100%;
 
     position: relative;
-
-    z-index: 5;
+    z-index: 2;
 }
 
 
 /* =========================================
-   HERO DECORATIONS
+   DECORATIONS
    ========================================= */
 
 .decor {
     position: absolute;
 
     font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
 
-    font-size: 30px;
-
-    color: #806653;
-
-    opacity: 0.38;
+    color: #9b7661;
+    opacity: 0.35;
 
     z-index: 2;
-
-    pointer-events: none;
 }
 
-.decor-top-left {
-    top: 80px;
-    left: 10%;
+.decor-top {
+    top: 55px;
+    left: 50%;
+
+    transform: translateX(-50%);
 }
 
-.decor-top-right {
-    top: 120px;
-    right: 10%;
-
-    font-size: 25px;
-}
-
-.decor-bottom-left {
-    bottom: 110px;
-    left: 12%;
-
-    font-size: 24px;
-}
-
-.decor-bottom-right {
-    bottom: 90px;
-    right: 12%;
+.decor-bottom {
+    display: none;
 }
 
 
@@ -175,23 +143,24 @@ h3 {
    ========================================= */
 
 .eyebrow {
-    margin: 0 0 22px;
+    margin: 0 0 25px;
 
     font-size: 11px;
-
     font-weight: 500;
 
     letter-spacing: 4px;
-
     text-transform: uppercase;
+
+    color: #806354;
 }
 
 .ornament {
-    font-size: 24px;
+    font-size: 22px;
 
     margin-bottom: 20px;
 
-    opacity: 0.65;
+    color: #9b7661;
+    opacity: 0.7;
 }
 
 .hero h1 {
@@ -202,6 +171,8 @@ h3 {
     font-weight: 500;
 
     line-height: 0.9;
+
+    color: #493a32;
 }
 
 .hero h1 span {
@@ -212,33 +183,20 @@ h3 {
     margin: 18px 0;
 
     font-style: italic;
-}
 
-
-/* =========================================
-   HERO SUBTITLE
-   ========================================= */
-
-.hero-subtitle {
-    margin: 30px auto 10px;
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 23px;
-
-    font-style: italic;
-
-    color: #765f4d;
+    color: #9b7661;
 }
 
 .intro {
     max-width: 550px;
 
-    margin: 18px auto 35px;
+    margin: 40px auto;
 
-    font-size: 13px;
+    font-size: 14px;
 
     line-height: 1.9;
+
+    color: #62544c;
 }
 
 
@@ -252,20 +210,20 @@ h3 {
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     min-width: 280px;
 
     padding: 22px 35px;
 
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
-    border-top: 1px solid rgba(63, 57, 52, 0.25);
+    border-top: 1px solid rgba(126, 86, 65, 0.3);
+    border-bottom: 1px solid rgba(126, 86, 65, 0.3);
 
-    border-bottom: 1px solid rgba(63, 57, 52, 0.25);
+    background: rgba(255, 250, 246, 0.45);
 
-    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(3px);
 }
 
 .day {
@@ -274,6 +232,8 @@ h3 {
     letter-spacing: 3px;
 
     margin-bottom: 12px;
+
+    color: #806354;
 }
 
 .date {
@@ -290,6 +250,8 @@ h3 {
     font-size: 55px;
 
     line-height: 1;
+
+    color: #493a32;
 }
 
 .date strong {
@@ -316,6 +278,8 @@ h3 {
     font-size: 10px;
 
     letter-spacing: 2px;
+
+    color: #806354;
 }
 
 
@@ -328,21 +292,20 @@ h3 {
 
     width: fit-content;
 
-    margin: 0 auto;
-
     align-items: center;
-
     justify-content: center;
 
     gap: 12px;
 
     padding: 14px 25px;
 
-    border: 1px solid rgba(63, 57, 52, 0.35);
+    margin: 0 auto;
 
-    color: #3f3934;
+    border: 1px solid rgba(126, 86, 65, 0.4);
 
-    background: rgba(255, 255, 255, 0.35);
+    color: #59463b;
+
+    background: rgba(255, 250, 246, 0.6);
 
     text-decoration: none;
 
@@ -354,7 +317,7 @@ h3 {
 }
 
 .open-button:hover {
-    background: #3f3934;
+    background: #59463b;
 
     color: #fff;
 
@@ -363,23 +326,6 @@ h3 {
 
 .open-button span {
     font-size: 15px;
-}
-
-
-/* =========================================
-   HERO FOOTER
-   ========================================= */
-
-.hero-footer-text {
-    margin: 25px 0 0;
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 17px;
-
-    font-style: italic;
-
-    opacity: 0.7;
 }
 
 
@@ -400,11 +346,11 @@ h3 {
 
     letter-spacing: 2px;
 
-    opacity: 0.55;
+    color: #806354;
 
-    z-index: 5;
+    opacity: 0.65;
 
-    white-space: nowrap;
+    z-index: 2;
 }
 
 
@@ -413,36 +359,70 @@ h3 {
    ========================================= */
 
 .invitation {
-    padding: 100px 20px 100px;
+    padding: 110px 20px 110px;
 
     text-align: center;
 
     position: relative;
 
     background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(225, 190, 172, 0.22),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(211, 179, 160, 0.18),
+            transparent 30%
+        ),
         linear-gradient(
             180deg,
-            #fffdf9 0%,
-            #faf4eb 45%,
-            #f4e9dc 100%
+            #fffaf6 0%,
+            #f8eee6 50%,
+            #f1e2d7 100%
         );
 }
 
+
+/* Decorative corner effect */
+
 .invitation::before {
-    content: "✦";
+    content: "❦";
 
     position: absolute;
 
     top: 35px;
-
     left: 50%;
 
     transform: translateX(-50%);
 
-    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
 
-    opacity: 0.3;
+    font-size: 22px;
+
+    color: #9b7661;
+
+    opacity: 0.45;
 }
+
+.invitation::after {
+    content: "";
+
+    position: absolute;
+
+    top: 75px;
+    left: 50%;
+
+    width: 70px;
+
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background: rgba(126, 86, 65, 0.25);
+}
+
 
 .section-label {
     margin: 0 0 15px;
@@ -453,49 +433,45 @@ h3 {
 
     text-transform: uppercase;
 
-    opacity: 0.65;
+    color: #8a6b59;
+
+    opacity: 0.85;
 }
 
 .invitation h2,
-.story-section h2 {
+.story-section h2,
+.closing-section h2 {
     margin: 0;
 
     font-size: clamp(42px, 7vw, 65px);
 
     font-weight: 500;
+
+    color: #493a32;
 }
 
 .invitation h2 span,
-.story-section h2 span {
+.story-section h2 span,
+.closing-section h2 span {
     font-style: italic;
 
     font-size: 0.65em;
 
     margin: 0 8px;
+
+    color: #9b7661;
 }
 
 .message {
     max-width: 650px;
 
-    margin: 30px auto 25px;
+    margin: 30px auto 75px;
 
     font-size: 14px;
 
-    line-height: 1.9;
-}
+    line-height: 2;
 
-.blessing-text {
-    max-width: 550px;
-
-    margin: 0 auto 70px;
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 19px;
-
-    font-style: italic;
-
-    color: #765f4d;
+    color: #63554c;
 }
 
 
@@ -507,14 +483,13 @@ h3 {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 45px;
 
     max-width: 900px;
 
-    margin: 0 auto 90px;
+    margin: 0 auto 105px;
 }
 
 .person-card {
@@ -530,27 +505,26 @@ h3 {
 
     margin: 0 auto 25px;
 
-    border: 1px solid rgba(130, 91, 65, 0.25);
+    border: 1px solid rgba(126, 86, 65, 0.25);
 
     border-radius: 120px 120px 20px 20px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.8),
-            rgba(225,208,190,0.4)
+            rgba(255,255,255,0.85),
+            rgba(225,202,188,0.5)
         );
 
     box-shadow:
-        0 12px 35px rgba(80, 55, 35, 0.08);
+        0 15px 40px rgba(80, 55, 35, 0.08);
 
-    color: #765f4d;
+    color: #806354;
 
     font-size: 10px;
 
@@ -563,6 +537,8 @@ h3 {
     font-size: 34px;
 
     font-weight: 600;
+
+    color: #493a32;
 }
 
 .parents {
@@ -571,10 +547,14 @@ h3 {
     font-size: 11px;
 
     line-height: 1.8;
+
+    color: #6a5a50;
 }
 
 .parents strong {
     font-weight: 500;
+
+    color: #493a32;
 }
 
 .couple-symbol {
@@ -584,36 +564,7 @@ h3 {
 
     font-style: italic;
 
-    color: #806653;
-}
-
-
-/* =========================================
-   EVENTS INTRO
-   ========================================= */
-
-.events-intro {
-    margin: 0 auto 35px;
-
-    max-width: 600px;
-
-    text-align: center;
-}
-
-.events-intro .section-label {
-    margin-bottom: 10px;
-}
-
-.events-intro p:last-child {
-    margin: 0;
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 19px;
-
-    font-style: italic;
-
-    color: #765f4d;
+    color: #9b7661;
 }
 
 
@@ -634,15 +585,15 @@ h3 {
 }
 
 .event-card {
-    padding: 40px 25px;
+    padding: 42px 25px;
 
-    border: 1px solid rgba(130, 91, 65, 0.18);
+    border: 1px solid rgba(126, 86, 65, 0.2);
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.9),
-            rgba(249,241,231,0.85)
+            rgba(255,255,255,0.88),
+            rgba(248,236,226,0.9)
         );
 
     text-align: center;
@@ -650,14 +601,33 @@ h3 {
     transition: 0.3s;
 
     box-shadow:
-        0 8px 25px rgba(80, 55, 35, 0.04);
+        0 10px 30px rgba(80, 55, 35, 0.05);
+
+    position: relative;
+}
+
+.event-card::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 11px;
+
+    color: #9b7661;
+
+    opacity: 0.45;
 }
 
 .event-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 
     box-shadow:
-        0 12px 35px rgba(80, 55, 35, 0.09);
+        0 15px 40px rgba(80, 55, 35, 0.1);
 }
 
 .event-title {
@@ -668,6 +638,8 @@ h3 {
     letter-spacing: 3px;
 
     font-weight: 600;
+
+    color: #806354;
 }
 
 .event-card h3 {
@@ -676,6 +648,8 @@ h3 {
     font-size: 27px;
 
     font-weight: 500;
+
+    color: #493a32;
 }
 
 .event-time {
@@ -686,6 +660,8 @@ h3 {
     line-height: 1.8;
 
     letter-spacing: 1px;
+
+    color: #725d50;
 }
 
 .venue {
@@ -694,6 +670,8 @@ h3 {
     font-size: 11px;
 
     line-height: 1.8;
+
+    color: #66574e;
 }
 
 .venue span {
@@ -720,24 +698,23 @@ h3 {
 
     margin: 0 auto 10px;
 
-    border: 1px dashed rgba(130, 91, 65, 0.4);
+    border: 1px dashed rgba(126, 86, 65, 0.4);
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background:
         repeating-linear-gradient(
             45deg,
-            rgba(130, 91, 65, 0.025),
-            rgba(130, 91, 65, 0.025) 3px,
+            rgba(126, 86, 65, 0.035),
+            rgba(126, 86, 65, 0.035) 3px,
             transparent 3px,
             transparent 6px
         );
 
-    color: #806653;
+    color: #806354;
 
     font-size: 9px;
 
@@ -752,6 +729,8 @@ h3 {
     letter-spacing: 1.5px;
 
     text-transform: uppercase;
+
+    color: #806354;
 }
 
 
@@ -762,7 +741,7 @@ h3 {
 .story-section {
     margin-top: 0;
 
-    padding: 100px 20px 90px;
+    padding: 110px 20px 100px;
 
     text-align: center;
 
@@ -770,61 +749,55 @@ h3 {
 
     background:
         radial-gradient(
-            circle at center,
-            #fffdf9 0%,
-            #f8eee3 55%,
-            #eee0d0 100%
+            circle at 15% 30%,
+            rgba(219, 181, 162, 0.2),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(211, 177, 157, 0.2),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #f8eee6 0%,
+            #fffaf6 50%,
+            #f0e1d6 100%
         );
 
-    border-top: 1px solid rgba(130, 91, 65, 0.12);
-
-    overflow: hidden;
+    border-top: 1px solid rgba(126, 86, 65, 0.15);
 }
 
+.story-section::before {
+    content: "❦";
 
-/* =========================================
-   STORY DECORATIONS
-   ========================================= */
-
-.story-decoration {
     position: absolute;
 
-    color: #806653;
+    top: 35px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
 
     font-family: 'Cormorant Garamond', serif;
 
-    font-size: 28px;
+    font-size: 22px;
 
-    opacity: 0.3;
+    color: #9b7661;
 
-    pointer-events: none;
+    opacity: 0.45;
 }
-
-.story-decoration-left {
-    left: 8%;
-
-    top: 80px;
-}
-
-.story-decoration-right {
-    right: 8%;
-
-    top: 80px;
-}
-
-
-/* =========================================
-   STORY TEXT
-   ========================================= */
 
 .story-message {
-    max-width: 600px;
+    max-width: 650px;
 
-    margin: 25px auto 45px;
+    margin: 25px auto 50px;
 
     font-size: 13px;
 
-    line-height: 1.9;
+    line-height: 2;
+
+    color: #66574e;
 }
 
 
@@ -836,7 +809,6 @@ h3 {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 25px;
@@ -859,22 +831,21 @@ h3 {
 
     height: 500px;
 
-    border: 1px dashed rgba(130, 91, 65, 0.35);
+    border: 1px dashed rgba(126, 86, 65, 0.35);
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.7),
-            rgba(225,208,190,0.35)
+            rgba(255,255,255,0.75),
+            rgba(225,202,188,0.4)
         );
 
-    color: #806653;
+    color: #806354;
 
     font-size: 10px;
 
@@ -890,10 +861,10 @@ h3 {
 
     display: block;
 
-    border: 1px solid rgba(130, 91, 65, 0.18);
+    border: 1px solid rgba(126, 86, 65, 0.2);
 
     box-shadow:
-        0 12px 35px rgba(80, 55, 35, 0.12);
+        0 15px 40px rgba(80, 55, 35, 0.13);
 }
 
 
@@ -908,11 +879,11 @@ h3 {
 
     flex-shrink: 0;
 
-    border: 1px solid rgba(130, 91, 65, 0.35);
+    border: 1px solid rgba(126, 86, 65, 0.35);
 
-    background: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 250, 246, 0.65);
 
-    color: #5b493c;
+    color: #5b493e;
 
     font-size: 20px;
 
@@ -921,7 +892,6 @@ h3 {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     transition: 0.3s;
@@ -932,7 +902,7 @@ h3 {
 }
 
 .slider-arrow:hover {
-    background: #5b493c;
+    background: #5b493e;
 
     color: #fff;
 
@@ -951,19 +921,85 @@ h3 {
 
     letter-spacing: 2px;
 
-    opacity: 0.65;
+    color: #806354;
+
+    opacity: 0.7;
 }
 
-.story-footer {
-    margin: 28px 0 0;
+
+/* =========================================
+   CLOSING SECTION
+   ========================================= */
+
+.closing-section {
+    position: relative;
+
+    padding: 120px 25px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffaf6 0%,
+            #f2e1d6 60%,
+            #e5cbbd 100%
+        );
+
+    border-top: 1px solid rgba(126, 86, 65, 0.15);
+
+    overflow: hidden;
+}
+
+.closing-section::before,
+.closing-section::after {
+    position: absolute;
 
     font-family: 'Cormorant Garamond', serif;
 
-    font-size: 18px;
+    font-size: 45px;
 
-    font-style: italic;
+    color: #9b7661;
 
-    color: #765f4d;
+    opacity: 0.18;
+}
+
+.closing-section::before {
+    content: "❦";
+
+    top: 45px;
+    left: 12%;
+}
+
+.closing-section::after {
+    content: "❦";
+
+    bottom: 45px;
+    right: 12%;
+}
+
+.closing-section h2 {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    font-size: clamp(42px, 7vw, 68px);
+
+    line-height: 1;
+
+    color: #493a32;
+}
+
+.closing-message {
+    max-width: 620px;
+
+    margin: 30px auto 0;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #66574e;
 }
 
 
@@ -982,7 +1018,6 @@ h3 {
     .couple-section {
         gap: 25px;
     }
-
 }
 
 
@@ -993,33 +1028,25 @@ h3 {
 @media (max-width: 700px) {
 
     .hero {
-        padding: 55px 18px;
+        padding: 50px 18px;
     }
 
     .hero::before {
-        width: 430px;
-        height: 430px;
-    }
+        width: calc(100% - 35px);
+        height: calc(100% - 35px);
 
-    .hero::after {
-        width: 600px;
-        height: 600px;
+        top: 17px;
+        left: 17px;
     }
 
     .hero h1 {
         font-size: 65px;
     }
 
-    .hero-subtitle {
-        font-size: 20px;
-
-        margin-top: 25px;
-    }
-
     .intro {
         font-size: 13px;
 
-        margin: 15px auto 30px;
+        margin: 30px auto;
     }
 
     .date-card {
@@ -1028,47 +1055,17 @@ h3 {
         padding: 20px 25px;
     }
 
-    .hero-footer-text {
-        font-size: 16px;
-    }
-
-    .decor-top-left {
-        top: 65px;
-        left: 6%;
-    }
-
-    .decor-top-right {
-        top: 90px;
-        right: 6%;
-    }
-
-    .decor-bottom-left {
-        bottom: 90px;
-        left: 7%;
-    }
-
-    .decor-bottom-right {
-        bottom: 75px;
-        right: 7%;
-    }
-
 
     /* Invitation */
 
     .invitation {
-        padding: 70px 15px 70px;
+        padding: 80px 15px 75px;
     }
 
     .message {
-        margin-bottom: 20px;
-
-        font-size: 13px;
-    }
-
-    .blessing-text {
         margin-bottom: 55px;
 
-        font-size: 17px;
+        font-size: 13px;
     }
 
 
@@ -1079,7 +1076,7 @@ h3 {
 
         gap: 25px;
 
-        margin-bottom: 65px;
+        margin-bottom: 75px;
     }
 
     .person-card {
@@ -1103,35 +1100,15 @@ h3 {
 
     /* Events */
 
-    .events-intro {
-        margin-bottom: 30px;
-    }
-
-    .events-intro p:last-child {
-        font-size: 17px;
-    }
-
     .event-card {
-        padding: 35px 20px;
+        padding: 40px 20px;
     }
 
 
     /* Story */
 
     .story-section {
-        padding: 70px 10px 60px;
-    }
-
-    .story-decoration-left {
-        left: 4%;
-
-        top: 60px;
-    }
-
-    .story-decoration-right {
-        right: 4%;
-
-        top: 60px;
+        padding: 80px 10px 65px;
     }
 
     .story-message {
@@ -1161,6 +1138,24 @@ h3 {
         font-size: 17px;
     }
 
+
+    /* Closing */
+
+    .closing-section {
+        padding: 90px 20px;
+    }
+
+    .closing-section::before {
+        left: 7%;
+    }
+
+    .closing-section::after {
+        right: 7%;
+    }
+
+    .closing-message {
+        font-size: 12px;
+    }
 }
 
 
@@ -1172,10 +1167,6 @@ h3 {
 
     .hero h1 {
         font-size: 56px;
-    }
-
-    .hero-subtitle {
-        font-size: 18px;
     }
 
     .date-card {
@@ -1203,4 +1194,8 @@ h3 {
         font-size: 15px;
     }
 
+    .closing-section::before,
+    .closing-section::after {
+        font-size: 32px;
+    }
 }
