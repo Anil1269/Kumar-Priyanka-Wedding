@@ -36,16 +36,12 @@ h3 {
 
 .hero {
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     position: relative;
-
     text-align: center;
-
     padding: 70px 20px;
 
     background:
@@ -68,29 +64,17 @@ h3 {
 .hero::before,
 .hero::after {
     content: "❈\A│\A❖\A│\A❈\A│\A◇\A│\A❖\A│\A❈";
-
     white-space: pre;
-
     position: absolute;
-
     top: 50%;
-
     transform: translateY(-50%);
-
     font-family: 'Cormorant Garamond', serif;
-
     font-size: 18px;
-
     line-height: 2.2;
-
     text-align: center;
-
     color: #a77b62;
-
     opacity: 0.22;
-
     pointer-events: none;
-
     z-index: 1;
 }
 
@@ -109,11 +93,8 @@ h3 {
 
 .hero-content {
     max-width: 800px;
-
     width: 100%;
-
     position: relative;
-
     z-index: 5;
 }
 
@@ -124,23 +105,16 @@ h3 {
 
 .decor {
     position: absolute;
-
     font-family: 'Cormorant Garamond', serif;
-
     color: #a77b62;
-
     opacity: 0.5;
-
     z-index: 5;
 }
 
 .decor-top {
     top: 45px;
-
     left: 50%;
-
     transform: translateX(-50%);
-
     font-size: 25px;
 }
 
@@ -155,61 +129,41 @@ h3 {
 
 .eyebrow {
     margin: 0 0 25px;
-
     font-size: 11px;
-
     font-weight: 500;
-
     letter-spacing: 4px;
-
     text-transform: uppercase;
-
     color: #765b4d;
 }
 
 .ornament {
     font-size: 22px;
-
     margin-bottom: 20px;
-
     color: #a77b62;
-
     opacity: 0.7;
 }
 
 .hero h1 {
     margin: 0;
-
     font-size: clamp(60px, 10vw, 110px);
-
     font-weight: 500;
-
     line-height: 0.9;
-
     color: #47382f;
 }
 
 .hero h1 span {
     display: block;
-
     font-size: 0.45em;
-
     margin: 18px 0;
-
     font-style: italic;
-
     color: #a77b62;
 }
 
 .intro {
     max-width: 550px;
-
     margin: 40px auto;
-
     font-size: 14px;
-
     line-height: 1.9;
-
     color: #62534a;
 }
 
@@ -220,79 +174,54 @@ h3 {
 
 .date-card {
     display: inline-flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     min-width: 280px;
-
     padding: 22px 35px;
-
     margin-bottom: 35px;
-
     border-top: 1px solid rgba(126, 86, 65, 0.3);
-
     border-bottom: 1px solid rgba(126, 86, 65, 0.3);
-
     background: rgba(255, 250, 246, 0.45);
 }
 
 .day {
     font-size: 10px;
-
     letter-spacing: 3px;
-
     margin-bottom: 12px;
-
     color: #765b4d;
 }
 
 .date {
     display: flex;
-
     align-items: center;
-
     gap: 15px;
 }
 
 .date > span {
     font-family: 'Cormorant Garamond', serif;
-
     font-size: 55px;
-
     line-height: 1;
-
     color: #47382f;
 }
 
 .date strong {
     display: block;
-
     font-size: 13px;
-
     letter-spacing: 2px;
 }
 
 .date small {
     display: block;
-
     margin-top: 5px;
-
     font-size: 11px;
-
     letter-spacing: 2px;
 }
 
 .time {
     margin-top: 14px;
-
     font-size: 10px;
-
     letter-spacing: 2px;
-
     color: #765b4d;
 }
 
@@ -303,39 +232,24 @@ h3 {
 
 .open-button {
     display: flex;
-
     width: fit-content;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 12px;
-
     padding: 14px 25px;
-
     margin: 0 auto;
-
     border: 1px solid rgba(126, 86, 65, 0.4);
-
     color: #59463b;
-
     background: rgba(255, 250, 246, 0.65);
-
     text-decoration: none;
-
     font-size: 10px;
-
     letter-spacing: 2px;
-
     transition: 0.3s;
 }
 
 .open-button:hover {
     background: #59463b;
-
     color: #fff;
-
     transform: translateY(-2px);
 }
 
@@ -350,21 +264,13 @@ h3 {
 
 .scroll-text {
     position: absolute;
-
     bottom: 18px;
-
     left: 50%;
-
     transform: translateX(-50%);
-
     font-size: 9px;
-
     letter-spacing: 2px;
-
     color: #765b4d;
-
     opacity: 0.6;
-
     z-index: 5;
 }
 
@@ -375,9 +281,7 @@ h3 {
 
 .invitation {
     padding: 110px 20px;
-
     text-align: center;
-
     position: relative;
 
     background:
@@ -409,31 +313,18 @@ h3 {
 .invitation::before,
 .invitation::after {
     content: "❈";
-
     position: absolute;
-
     top: 35px;
-
     bottom: 35px;
-
     width: 28px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     font-family: 'Cormorant Garamond', serif;
-
     font-size: 20px;
-
     color: #a77b62;
-
     opacity: 0.25;
-
     border-top: 1px solid rgba(167, 123, 98, 0.25);
-
     border-bottom: 1px solid rgba(167, 123, 98, 0.25);
 
     background:
@@ -446,7 +337,6 @@ h3 {
         );
 
     pointer-events: none;
-
     z-index: 1;
 }
 
@@ -465,19 +355,12 @@ h3 {
 
 .section-label {
     margin: 0 0 15px;
-
     font-size: 10px;
-
     letter-spacing: 4px;
-
     text-transform: uppercase;
-
     color: #896956;
-
     opacity: 0.85;
-
     position: relative;
-
     z-index: 3;
 }
 
@@ -485,42 +368,28 @@ h3 {
 .story-section h2,
 .closing-section h2 {
     margin: 0;
-
     font-size: clamp(42px, 7vw, 65px);
-
     font-weight: 500;
-
     color: #493a31;
-
     position: relative;
-
     z-index: 3;
 }
 
 .invitation h2 span,
 .story-section h2 span {
     font-style: italic;
-
     font-size: 0.65em;
-
     margin: 0 8px;
-
     color: #a77b62;
 }
 
 .message {
     max-width: 650px;
-
     margin: 30px auto 75px;
-
     font-size: 14px;
-
     line-height: 2;
-
     color: #63544b;
-
     position: relative;
-
     z-index: 3;
 }
 
@@ -531,124 +400,98 @@ h3 {
 
 .couple-section {
     display: flex;
-
-    align-items: center;
-
+    align-items: flex-start;
     justify-content: center;
-
     gap: 45px;
-
     max-width: 900px;
-
     margin: 0 auto 105px;
-
     position: relative;
-
     z-index: 3;
 }
 
 .person-card {
     width: 300px;
-
     text-align: center;
 }
 
 
 /* =========================================
    BRIDE & GROOM PHOTO
+   AUTO FIT - NO CROP - NO WHITE SPACE
    ========================================= */
 
 .photo-placeholder {
-    width: 240px;
-
-    height: 300px;
-
+    width: 100%;
+    max-width: 300px;
     margin: 0 auto 25px;
 
     border: 1px solid rgba(126, 86, 65, 0.25);
 
-    border-radius: 120px 120px 20px 20px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
+    border-radius: 35px;
 
     overflow: hidden;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.85),
-            rgba(225,202,188,0.5)
-        );
+    display: block;
+
+    background: transparent;
 
     box-shadow:
         0 15px 40px rgba(80, 55, 35, 0.08);
 
-    color: #806453;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
+    position: relative;
 }
 
-
-/*
-   When an actual groom/bride image is added,
-   this keeps the complete photo visible.
-   Nothing is cropped.
-*/
-
 .person-photo {
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: contain;
-
     display: block;
 
-    padding: 8px;
+    width: 100%;
 
-    background: #ffffff;
+    height: auto;
+
+    max-width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    object-fit: initial;
+
+    background: transparent;
+
+    border: 0;
+
+    border-radius: 34px;
+}
+
+.photo-placeholder .person-photo + span {
+    display: none;
 }
 
 .person-card h3 {
     margin: 0 0 10px;
-
     font-size: 34px;
-
     font-weight: 600;
-
     color: #493a31;
 }
 
 .parents {
     margin: 0;
-
     font-size: 11px;
-
     line-height: 1.8;
-
     color: #6a5a50;
 }
 
 .parents strong {
     font-weight: 500;
-
     color: #493a31;
 }
 
 .couple-symbol {
     font-family: 'Cormorant Garamond', serif;
-
     font-size: 45px;
-
     font-style: italic;
-
     color: #a77b62;
+    margin-top: 120px;
 }
 
 
@@ -658,23 +501,16 @@ h3 {
 
 .events {
     max-width: 1100px;
-
     margin: 0 auto;
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 25px;
-
     position: relative;
-
     z-index: 3;
 }
 
 .event-card {
     padding: 42px 25px;
-
     border: 1px solid rgba(126, 86, 65, 0.2);
 
     background:
@@ -685,7 +521,6 @@ h3 {
         );
 
     text-align: center;
-
     transition: 0.3s;
 
     box-shadow:
@@ -696,19 +531,12 @@ h3 {
 
 .event-card::before {
     content: "✦";
-
     position: absolute;
-
     top: 14px;
-
     left: 50%;
-
     transform: translateX(-50%);
-
     font-size: 11px;
-
     color: #a77b62;
-
     opacity: 0.5;
 }
 
@@ -721,51 +549,36 @@ h3 {
 
 .event-title {
     margin: 0 0 20px;
-
     font-size: 10px;
-
     letter-spacing: 3px;
-
     font-weight: 600;
-
     color: #806453;
 }
 
 .event-card h3 {
     margin: 0 0 12px;
-
     font-size: 27px;
-
     font-weight: 500;
-
     color: #493a31;
 }
 
 .event-time {
     margin: 0 0 20px;
-
     font-size: 12px;
-
     line-height: 1.8;
-
     letter-spacing: 1px;
-
     color: #725c4e;
 }
 
 .venue {
     margin: 0;
-
     font-size: 11px;
-
     line-height: 1.8;
-
     color: #66574e;
 }
 
 .venue span {
     font-size: 9px;
-
     opacity: 0.65;
 }
 
@@ -776,17 +589,14 @@ h3 {
 
 .location-qr {
     margin-top: 25px;
-
     text-align: center;
 }
 
 .location-qr .qr-image {
     width: 120px;
-
     height: 120px;
 
     max-width: 120px;
-
     max-height: 120px;
 
     object-fit: contain;
@@ -804,13 +614,9 @@ h3 {
 
 .location-qr p {
     margin: 0;
-
     font-size: 9px;
-
     letter-spacing: 1.5px;
-
     text-transform: uppercase;
-
     color: #806453;
 }
 
@@ -821,9 +627,7 @@ h3 {
 
 .story-section {
     padding: 110px 20px 100px;
-
     text-align: center;
-
     position: relative;
 
     background:
@@ -851,7 +655,6 @@ h3 {
     position: absolute;
 
     top: 35px;
-
     bottom: 35px;
 
     width: 28px;
@@ -859,7 +662,6 @@ h3 {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     font-family: 'Cormorant Garamond', serif;
@@ -898,23 +700,18 @@ h3 {
 
 .story-message {
     max-width: 650px;
-
     margin: 25px auto 50px;
-
     font-size: 13px;
-
     line-height: 2;
-
     color: #66574e;
-
     position: relative;
-
     z-index: 3;
 }
 
 
 /* =========================================
    PHOTO SLIDER
+   AUTO FIT - NO CROP
    ========================================= */
 
 .photo-slider {
@@ -926,7 +723,7 @@ h3 {
 
     gap: 25px;
 
-    max-width: 950px;
+    max-width: 1100px;
 
     margin: 0 auto;
 
@@ -936,17 +733,23 @@ h3 {
 }
 
 .story-photo {
-    width: 600px;
+    width: auto;
 
-    max-width: 75vw;
+    max-width: min(700px, 75vw);
 
-    flex-shrink: 0;
+    flex-shrink: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
 .story-photo-placeholder {
     width: 100%;
 
-    height: 500px;
+    min-height: 300px;
 
     border: 1px dashed rgba(126, 86, 65, 0.35);
 
@@ -970,24 +773,22 @@ h3 {
     letter-spacing: 2px;
 }
 
-
-/*
-   Story photos use contain so the full
-   image remains visible without cropping.
-*/
-
 .story-photo-image {
-    width: 100%;
-
-    height: 500px;
-
-    object-fit: contain;
-
     display: block;
 
-    padding: 8px;
+    width: auto;
 
-    background: #ffffff;
+    height: auto;
+
+    max-width: 100%;
+
+    max-height: 70vh;
+
+    object-fit: initial;
+
+    padding: 0;
+
+    background: transparent;
 
     border: 1px solid rgba(126, 86, 65, 0.2);
 
@@ -1150,7 +951,6 @@ h3 {
 
 .closing-section .section-label {
     position: relative;
-
     z-index: 3;
 }
 
@@ -1220,7 +1020,6 @@ h3 {
 
     .events {
         grid-template-columns: 1fr;
-
         max-width: 550px;
     }
 
@@ -1256,13 +1055,11 @@ h3 {
 
     .hero::before {
         left: 5px;
-
         font-size: 13px;
     }
 
     .hero::after {
         right: 5px;
-
         font-size: 13px;
     }
 
@@ -1272,13 +1069,11 @@ h3 {
 
     .intro {
         font-size: 13px;
-
         margin: 30px auto;
     }
 
     .date-card {
         min-width: 250px;
-
         padding: 20px 25px;
     }
 
@@ -1291,27 +1086,20 @@ h3 {
 
     .invitation::before {
         left: 4px;
-
         width: 18px;
-
         font-size: 15px;
-
         opacity: 0.16;
     }
 
     .invitation::after {
         right: 4px;
-
         width: 18px;
-
         font-size: 15px;
-
         opacity: 0.16;
     }
 
     .message {
         margin-bottom: 55px;
-
         font-size: 13px;
     }
 
@@ -1320,20 +1108,27 @@ h3 {
 
     .couple-section {
         flex-direction: column;
-
+        align-items: center;
         gap: 25px;
-
         margin-bottom: 75px;
     }
 
     .person-card {
         width: 100%;
+        max-width: 340px;
     }
 
     .photo-placeholder {
-        width: 210px;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+    }
 
-        height: 260px;
+    .person-photo {
+        width: 100%;
+        height: auto;
+        border-radius: 29px;
     }
 
     .person-card h3 {
@@ -1342,6 +1137,7 @@ h3 {
 
     .couple-symbol {
         font-size: 35px;
+        margin-top: 0;
     }
 
 
@@ -1360,48 +1156,43 @@ h3 {
 
     .story-section::before {
         left: 4px;
-
         width: 18px;
-
         font-size: 15px;
-
         opacity: 0.16;
     }
 
     .story-section::after {
         right: 4px;
-
         width: 18px;
-
         font-size: 15px;
-
         opacity: 0.16;
     }
 
     .story-message {
         margin-bottom: 35px;
-
         font-size: 12px;
     }
 
     .photo-slider {
         gap: 8px;
+        width: 100%;
     }
 
     .story-photo {
-        max-width: 72vw;
+        width: auto;
+        max-width: calc(100vw - 100px);
     }
 
-    .story-photo-placeholder,
     .story-photo-image {
-        height: 420px;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 65vh;
     }
 
     .slider-arrow {
         width: 38px;
-
         height: 38px;
-
         font-size: 17px;
     }
 
@@ -1414,33 +1205,25 @@ h3 {
 
     .closing-section::before {
         left: 4px;
-
         width: 18px;
-
         font-size: 15px;
-
         opacity: 0.16;
     }
 
     .closing-section::after {
         right: 4px;
-
         width: 18px;
-
         font-size: 15px;
-
         opacity: 0.16;
     }
 
     .closing-section h2 {
         font-size: 45px;
-
         line-height: 1.1;
     }
 
     .closing-message {
         font-size: 12px;
-
         line-height: 1.9;
     }
 }
@@ -1478,20 +1261,25 @@ h3 {
         opacity: 0.12;
     }
 
-    .story-photo {
-        max-width: 70vw;
+    .person-card {
+        max-width: 300px;
     }
 
-    .story-photo-placeholder,
+    .photo-placeholder {
+        max-width: 280px;
+    }
+
+    .story-photo {
+        max-width: calc(100vw - 85px);
+    }
+
     .story-photo-image {
-        height: 360px;
+        max-height: 60vh;
     }
 
     .slider-arrow {
         width: 34px;
-
         height: 34px;
-
         font-size: 15px;
     }
 
