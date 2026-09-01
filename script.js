@@ -1,12 +1,10 @@
-```javascript
 function openInvitation() {
+    const invitation = document.getElementById("invitation");
 
-    const invitation =
-        document.getElementById("invitation");
-
-    invitation.scrollIntoView({
-        behavior: "smooth"
-    });
-
+    if (invitation) {
+        invitation.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
 }
-```
