@@ -15,11 +15,11 @@ function openInvitation() {
    ========================= */
 
 const photos = [
-    "images/Couple_1.JPEG",
-    "images/Couple_2.jpeg",
-    "images/Couple_3.JPEG",
-    "images/Couple_4.jpeg",
-    "images/Couple_5.JPEG"
+    "images/Couple_1.jpg",
+    "images/Couple_2.jpg",
+    "images/Couple_3.jpg",
+    "images/Couple_4.jpg",
+    "images/Couple_5.jpg"
 ];
 
 let currentPhoto = 0;
