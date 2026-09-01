@@ -1,4 +1,4 @@
-```css
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -541,4 +541,91 @@ h1 span {
     }
 
 }
+/* ================================
+Bride & Groom Section
+================================ */
+
+.couple-section {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 45px;
+margin: 60px auto 80px;
+max-width: 900px;
+}
+
+.person-card {
+text-align: center;
+width: 300px;
+}
+
+.photo-placeholder {
+width: 240px;
+height: 300px;
+margin: 0 auto 25px;
+border: 1px solid rgba(0, 0, 0, 0.15);
+border-radius: 120px 120px 20px 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(0, 0, 0, 0.03);
+font-family: 'Montserrat', sans-serif;
+font-size: 11px;
+letter-spacing: 2px;
+}
+
+.person-card h3 {
+font-family: 'Cormorant Garamond', serif;
+font-size: 34px;
+font-weight: 600;
+margin: 0 0 10px;
+}
+
+.parents {
+font-family: 'Montserrat', sans-serif;
+font-size: 12px;
+line-height: 1.8;
+margin: 0;
+}
+
+.parents strong {
+font-weight: 500;
+}
+
+.couple-symbol {
+font-family: 'Cormorant Garamond', serif;
+font-size: 42px;
+font-weight: 500;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
 ```
+.couple-section {
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.person-card {
+    width: 100%;
+}
+
+.photo-placeholder {
+    width: 210px;
+    height: 260px;
+}
+
+.person-card h3 {
+    font-size: 30px;
+}
+
+.couple-symbol {
+    font-size: 34px;
+}
+```
+
+}
+
