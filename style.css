@@ -1,4 +1,3 @@
-```css
 /* =========================================
    WEDDING WEBSITE - KUMAR & PRIYANKA
    ========================================= */
@@ -554,6 +553,11 @@ h3 {
     text-align: center;
 }
 
+
+/* =========================================
+   BRIDE & GROOM PHOTO
+   ========================================= */
+
 .photo-placeholder {
     width: 240px;
 
@@ -591,12 +595,13 @@ h3 {
 }
 
 
-/* =========================================
-   BRIDE & GROOM PHOTO
-   FIT WITHOUT CROPPING
-   ========================================= */
+/*
+   When an actual groom/bride image is added,
+   this keeps the complete photo visible.
+   Nothing is cropped.
+*/
 
-.person-card .person-photo {
+.person-photo {
     width: 100%;
 
     height: 100%;
@@ -605,11 +610,10 @@ h3 {
 
     display: block;
 
-    padding: 5px;
+    padding: 8px;
 
-    background: #fffaf6;
+    background: #ffffff;
 }
-
 
 .person-card h3 {
     margin: 0 0 10px;
@@ -776,56 +780,6 @@ h3 {
     text-align: center;
 }
 
-.qr-placeholder {
-    width: 120px;
-
-    height: 120px;
-
-    margin: 0 auto 10px;
-
-    border: 1px dashed rgba(126, 86, 65, 0.4);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background:
-        repeating-linear-gradient(
-            45deg,
-            rgba(126, 86, 65, 0.035),
-            rgba(126, 86, 65, 0.035) 3px,
-            transparent 3px,
-            transparent 6px
-        );
-
-    color: #806453;
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
-
-    overflow: hidden;
-}
-
-.location-qr p {
-    margin: 0;
-
-    font-size: 9px;
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-
-    color: #806453;
-}
-
-
-/* =========================================
-   QR IMAGE - FIT WITHOUT CROPPING
-   ========================================= */
-
 .location-qr .qr-image {
     width: 120px;
 
@@ -846,6 +800,18 @@ h3 {
     background: #ffffff;
 
     border: 1px solid rgba(126, 86, 65, 0.25);
+}
+
+.location-qr p {
+    margin: 0;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #806453;
 }
 
 
@@ -975,8 +941,6 @@ h3 {
     max-width: 75vw;
 
     flex-shrink: 0;
-
-    overflow: hidden;
 }
 
 .story-photo-placeholder {
@@ -1007,10 +971,10 @@ h3 {
 }
 
 
-/* =========================================
-   COUPLE PHOTO
-   FIT WITHOUT CROPPING
-   ========================================= */
+/*
+   Story photos use contain so the full
+   image remains visible without cropping.
+*/
 
 .story-photo-image {
     width: 100%;
@@ -1021,12 +985,14 @@ h3 {
 
     display: block;
 
+    padding: 8px;
+
+    background: #ffffff;
+
     border: 1px solid rgba(126, 86, 65, 0.2);
 
     box-shadow:
         0 15px 40px rgba(80, 55, 35, 0.13);
-
-    background: #fffaf6;
 }
 
 
@@ -1537,4 +1503,3 @@ h3 {
         font-size: 40px;
     }
 }
-```
