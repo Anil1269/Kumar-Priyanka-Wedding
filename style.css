@@ -3,8 +3,16 @@ Wedding Website - Kumar & Priyanka
 ========================================= */
 
 /* =========================================
-Google Fonts
+Basic Reset
 ========================================= */
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
 
 body {
 margin: 0;
@@ -21,18 +29,6 @@ overflow-x: hidden;
 
 }
 
-/* =========================================
-General
-========================================= */
-
-* {
-  box-sizing: border-box;
-  }
-
-html {
-scroll-behavior: smooth;
-}
-
 section {
 width: 100%;
 }
@@ -44,7 +40,7 @@ font-family: 'Cormorant Garamond', serif;
 }
 
 /* =========================================
-Opening / Hero Section
+HERO
 ========================================= */
 
 .hero {
@@ -53,6 +49,7 @@ min-height: 100vh;
 ```
 display: flex;
 flex-direction: column;
+
 align-items: center;
 justify-content: center;
 
@@ -77,17 +74,19 @@ overflow: hidden;
 
 .hero-content {
 max-width: 800px;
-width: 100%;
 
 ```
+width: 100%;
+
 position: relative;
+
 z-index: 2;
 ```
 
 }
 
 /* =========================================
-Decorative Elements
+Decorations
 ========================================= */
 
 .decor {
@@ -105,14 +104,24 @@ opacity: 0.45;
 
 .decor-top {
 top: 45px;
+
+```
 left: 50%;
+
 transform: translateX(-50%);
+```
+
 }
 
 .decor-bottom {
 bottom: 55px;
+
+```
 left: 50%;
+
 transform: translateX(-50%);
+```
+
 }
 
 /* =========================================
@@ -124,6 +133,7 @@ margin: 0 0 25px;
 
 ```
 font-size: 11px;
+
 font-weight: 500;
 
 letter-spacing: 4px;
@@ -179,14 +189,12 @@ margin: 40px auto;
 font-size: 14px;
 
 line-height: 1.9;
-
-font-weight: 400;
 ```
 
 }
 
 /* =========================================
-Date Card
+Date
 ========================================= */
 
 .date-card {
@@ -203,10 +211,11 @@ min-width: 280px;
 
 padding: 22px 35px;
 
-border-top: 1px solid rgba(63, 57, 52, 0.25);
-border-bottom: 1px solid rgba(63, 57, 52, 0.25);
-
 margin-bottom: 35px;
+
+border-top: 1px solid rgba(63, 57, 52, 0.25);
+
+border-bottom: 1px solid rgba(63, 57, 52, 0.25);
 ```
 
 }
@@ -280,7 +289,7 @@ letter-spacing: 2px;
 }
 
 /* =========================================
-Open Invitation Button
+Open Invitation
 ========================================= */
 
 .open-button {
@@ -323,6 +332,10 @@ transform: translateY(-2px);
 font-size: 15px;
 }
 
+/* =========================================
+Scroll Text
+========================================= */
+
 .scroll-text {
 position: absolute;
 
@@ -343,7 +356,7 @@ opacity: 0.55;
 }
 
 /* =========================================
-Invitation Section
+INVITATION
 ========================================= */
 
 .invitation {
@@ -410,7 +423,7 @@ line-height: 1.9;
 }
 
 /* =========================================
-Bride & Groom Section
+BRIDE & GROOM
 ========================================= */
 
 .couple-section {
@@ -439,13 +452,12 @@ text-align: center;
 
 }
 
-/* Photo placeholder */
-
 .photo-placeholder {
 width: 240px;
-height: 300px;
 
 ```
+height: 300px;
+
 margin: 0 auto 25px;
 
 border: 1px solid rgba(63, 57, 52, 0.18);
@@ -507,7 +519,7 @@ font-style: italic;
 }
 
 /* =========================================
-Events
+EVENTS
 ========================================= */
 
 .events {
@@ -607,7 +619,7 @@ opacity: 0.65;
 }
 
 /* =========================================
-Location QR Code
+LOCATION QR
 ========================================= */
 
 .location-qr {
@@ -621,9 +633,10 @@ text-align: center;
 
 .qr-placeholder {
 width: 120px;
-height: 120px;
 
 ```
+height: 120px;
+
 margin: 0 auto 10px;
 
 border: 1px dashed rgba(63, 57, 52, 0.35);
@@ -657,7 +670,7 @@ text-transform: uppercase;
 }
 
 /* =========================================
-Our Story
+OUR STORY
 ========================================= */
 
 .story-section {
@@ -687,7 +700,7 @@ line-height: 1.9;
 }
 
 /* =========================================
-Photo Slider
+PHOTO SLIDER
 ========================================= */
 
 .photo-slider {
@@ -753,14 +766,15 @@ display: block;
 }
 
 /* =========================================
-Slider Arrows
+SLIDER ARROWS
 ========================================= */
 
 .slider-arrow {
 width: 45px;
-height: 45px;
 
 ```
+height: 45px;
+
 flex-shrink: 0;
 
 border: 1px solid rgba(63, 57, 52, 0.25);
@@ -796,7 +810,7 @@ transform: scale(1.05);
 }
 
 /* =========================================
-Photo Counter
+PHOTO COUNTER
 ========================================= */
 
 .photo-counter {
@@ -813,7 +827,7 @@ opacity: 0.65;
 }
 
 /* =========================================
-Mobile Responsive
+TABLET
 ========================================= */
 
 @media (max-width: 850px) {
@@ -828,27 +842,26 @@ Mobile Responsive
 
 }
 
+/* =========================================
+MOBILE
+========================================= */
+
 @media (max-width: 700px) {
 
 ```
-/* Hero */
-
 .hero {
     padding: 50px 18px;
 }
 
-
 .hero h1 {
     font-size: 65px;
 }
-
 
 .intro {
     font-size: 13px;
 
     margin: 30px auto;
 }
-
 
 .date-card {
     min-width: 250px;
@@ -863,7 +876,6 @@ Mobile Responsive
     padding: 70px 15px 50px;
 }
 
-
 .message {
     margin-bottom: 50px;
 
@@ -871,7 +883,7 @@ Mobile Responsive
 }
 
 
-/* Couple */
+/* Bride & Groom */
 
 .couple-section {
     flex-direction: column;
@@ -881,11 +893,9 @@ Mobile Responsive
     margin-bottom: 70px;
 }
 
-
 .person-card {
     width: 100%;
 }
-
 
 .photo-placeholder {
     width: 210px;
@@ -893,11 +903,9 @@ Mobile Responsive
     height: 260px;
 }
 
-
 .person-card h3 {
     font-size: 30px;
 }
-
 
 .couple-symbol {
     font-size: 35px;
@@ -911,7 +919,7 @@ Mobile Responsive
 }
 
 
-/* Story */
+/* Our Story */
 
 .story-section {
     margin-top: 70px;
@@ -919,32 +927,28 @@ Mobile Responsive
     padding: 70px 10px 60px;
 }
 
-
 .story-message {
     margin-bottom: 35px;
 
     font-size: 12px;
 }
 
-
 .photo-slider {
     gap: 8px;
 }
 
-
 .story-photo {
     max-width: 72vw;
 }
-
 
 .story-photo-placeholder,
 .story-photo-image {
     height: 420px;
 }
 
-
 .slider-arrow {
     width: 38px;
+
     height: 38px;
 
     font-size: 17px;
@@ -953,6 +957,10 @@ Mobile Responsive
 
 }
 
+/* =========================================
+SMALL MOBILE
+========================================= */
+
 @media (max-width: 420px) {
 
 ```
@@ -960,30 +968,26 @@ Mobile Responsive
     font-size: 56px;
 }
 
-
 .date-card {
     min-width: 230px;
 }
-
 
 .date > span {
     font-size: 48px;
 }
 
-
 .story-photo {
     max-width: 70vw;
 }
-
 
 .story-photo-placeholder,
 .story-photo-image {
     height: 360px;
 }
 
-
 .slider-arrow {
     width: 34px;
+
     height: 34px;
 
     font-size: 15px;
