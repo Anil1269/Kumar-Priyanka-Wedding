@@ -1474,3 +1474,26 @@ h3 {
         font-size: 40px;
     }
 }
+/* =========================================
+   QR IMAGE - FIT INSIDE EXISTING BOX
+   ========================================= */
+
+.location-qr .qr-image {
+    width: 120px;
+    height: 120px;
+
+    max-width: 120px;
+    max-height: 120px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 10px;
+
+    padding: 5px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(126, 86, 65, 0.25);
+}
