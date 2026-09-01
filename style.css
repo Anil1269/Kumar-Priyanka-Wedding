@@ -1,11 +1,3 @@
-/* =========================================
-Wedding Website - Kumar & Priyanka
-========================================= */
-
-/* =========================================
-Basic Reset
-========================================= */
-
 * {
   box-sizing: border-box;
   }
@@ -17,16 +9,10 @@ scroll-behavior: smooth;
 body {
 margin: 0;
 padding: 0;
-
-```
 background: #faf8f4;
 color: #3f3934;
-
 font-family: 'Montserrat', sans-serif;
-
 overflow-x: hidden;
-```
-
 }
 
 section {
@@ -39,468 +25,266 @@ h3 {
 font-family: 'Cormorant Garamond', serif;
 }
 
-/* =========================================
+/* =========================
 HERO
-========================================= */
+========================= */
 
 .hero {
 min-height: 100vh;
-
-```
 display: flex;
 flex-direction: column;
-
 align-items: center;
 justify-content: center;
-
 position: relative;
-
 text-align: center;
-
 padding: 60px 20px;
-
 background:
-    radial-gradient(
-        circle at center,
-        #fffdf9 0%,
-        #faf7f1 55%,
-        #f3eee6 100%
-    );
-
+radial-gradient(
+circle at center,
+#fffdf9 0%,
+#faf7f1 55%,
+#f3eee6 100%
+);
 overflow: hidden;
-```
-
 }
 
 .hero-content {
 max-width: 800px;
-
-```
 width: 100%;
-
 position: relative;
-
 z-index: 2;
-```
-
 }
-
-/* =========================================
-Decorations
-========================================= */
 
 .decor {
 position: absolute;
-
-```
 font-family: 'Cormorant Garamond', serif;
-
 font-size: 35px;
-
 opacity: 0.45;
-```
-
 }
 
 .decor-top {
 top: 45px;
-
-```
 left: 50%;
-
 transform: translateX(-50%);
-```
-
 }
 
 .decor-bottom {
 bottom: 55px;
-
-```
 left: 50%;
-
 transform: translateX(-50%);
-```
-
 }
 
-/* =========================================
-Hero Text
-========================================= */
+/* =========================
+HERO TEXT
+========================= */
 
 .eyebrow {
 margin: 0 0 25px;
-
-```
 font-size: 11px;
-
 font-weight: 500;
-
 letter-spacing: 4px;
-
 text-transform: uppercase;
-```
-
 }
 
 .ornament {
 font-size: 24px;
-
-```
 margin-bottom: 20px;
-
 opacity: 0.65;
-```
-
 }
 
 .hero h1 {
 margin: 0;
-
-```
 font-size: clamp(60px, 10vw, 110px);
-
 font-weight: 500;
-
 line-height: 0.9;
-```
-
 }
 
 .hero h1 span {
 display: block;
-
-```
 font-size: 0.45em;
-
 margin: 18px 0;
-
 font-style: italic;
-```
-
 }
 
 .intro {
 max-width: 550px;
-
-```
 margin: 40px auto;
-
 font-size: 14px;
-
 line-height: 1.9;
-```
-
 }
 
-/* =========================================
-Date
-========================================= */
+/* =========================
+DATE
+========================= */
 
 .date-card {
 display: inline-flex;
-
-```
 flex-direction: column;
-
 align-items: center;
-
 justify-content: center;
-
 min-width: 280px;
-
 padding: 22px 35px;
-
 margin-bottom: 35px;
-
 border-top: 1px solid rgba(63, 57, 52, 0.25);
-
 border-bottom: 1px solid rgba(63, 57, 52, 0.25);
-```
-
 }
 
 .day {
 font-size: 10px;
-
-```
 letter-spacing: 3px;
-
 margin-bottom: 12px;
-```
-
 }
 
 .date {
 display: flex;
-
-```
 align-items: center;
-
 gap: 15px;
-```
-
 }
 
 .date > span {
 font-family: 'Cormorant Garamond', serif;
-
-```
 font-size: 55px;
-
 line-height: 1;
-```
-
 }
 
 .date strong {
 display: block;
-
-```
 font-size: 13px;
-
 letter-spacing: 2px;
-```
-
 }
 
 .date small {
 display: block;
-
-```
 margin-top: 5px;
-
 font-size: 11px;
-
 letter-spacing: 2px;
-```
-
 }
 
 .time {
 margin-top: 14px;
-
-```
 font-size: 10px;
-
 letter-spacing: 2px;
-```
-
 }
 
-/* =========================================
-Open Invitation
-========================================= */
+/* =========================
+BUTTON
+========================= */
 
 .open-button {
 display: inline-flex;
-
-```
 align-items: center;
-
 gap: 12px;
-
 padding: 14px 25px;
-
 border: 1px solid rgba(63, 57, 52, 0.35);
-
 color: #3f3934;
-
 text-decoration: none;
-
 font-size: 10px;
-
 letter-spacing: 2px;
-
 transition: 0.3s;
-```
-
 }
 
 .open-button:hover {
 background: #3f3934;
-
-```
 color: #fff;
-
 transform: translateY(-2px);
-```
-
 }
 
 .open-button span {
 font-size: 15px;
 }
 
-/* =========================================
-Scroll Text
-========================================= */
-
 .scroll-text {
 position: absolute;
-
-```
 bottom: 18px;
-
 left: 50%;
-
 transform: translateX(-50%);
-
 font-size: 9px;
-
 letter-spacing: 2px;
-
 opacity: 0.55;
-```
-
 }
 
-/* =========================================
+/* =========================
 INVITATION
-========================================= */
+========================= */
 
 .invitation {
 padding: 100px 20px 80px;
-
-```
 text-align: center;
-
 background: #fffdf9;
-```
-
 }
 
 .section-label {
 margin: 0 0 15px;
-
-```
 font-size: 10px;
-
 letter-spacing: 4px;
-
 text-transform: uppercase;
-
 opacity: 0.65;
-```
-
 }
 
 .invitation h2,
 .story-section h2 {
 margin: 0;
-
-```
 font-size: clamp(42px, 7vw, 65px);
-
 font-weight: 500;
-```
-
 }
 
 .invitation h2 span,
 .story-section h2 span {
 font-style: italic;
-
-```
 font-size: 0.65em;
-
 margin: 0 8px;
-```
-
 }
 
 .message {
 max-width: 650px;
-
-```
 margin: 30px auto 70px;
-
 font-size: 14px;
-
 line-height: 1.9;
-```
-
 }
 
-/* =========================================
+/* =========================
 BRIDE & GROOM
-========================================= */
+========================= */
 
 .couple-section {
 display: flex;
-
-```
 align-items: center;
-
 justify-content: center;
-
 gap: 45px;
-
 max-width: 900px;
-
 margin: 0 auto 100px;
-```
-
 }
 
 .person-card {
 width: 300px;
-
-```
 text-align: center;
-```
-
 }
 
 .photo-placeholder {
 width: 240px;
-
-```
 height: 300px;
-
 margin: 0 auto 25px;
-
 border: 1px solid rgba(63, 57, 52, 0.18);
-
 border-radius: 120px 120px 20px 20px;
-
 display: flex;
-
 align-items: center;
-
 justify-content: center;
-
 background: rgba(63, 57, 52, 0.025);
-
 font-size: 10px;
-
 letter-spacing: 2px;
-
 opacity: 0.7;
-```
-
 }
 
 .person-card h3 {
 margin: 0 0 10px;
-
-```
 font-size: 34px;
-
 font-weight: 600;
-```
-
 }
 
 .parents {
 margin: 0;
-
-```
 font-size: 11px;
-
 line-height: 1.8;
-```
-
 }
 
 .parents strong {
@@ -509,346 +293,203 @@ font-weight: 500;
 
 .couple-symbol {
 font-family: 'Cormorant Garamond', serif;
-
-```
 font-size: 45px;
-
 font-style: italic;
-```
-
 }
 
-/* =========================================
+/* =========================
 EVENTS
-========================================= */
+========================= */
 
 .events {
 max-width: 1100px;
-
-```
 margin: 0 auto;
-
 display: grid;
-
 grid-template-columns: repeat(3, 1fr);
-
 gap: 25px;
-```
-
 }
 
 .event-card {
 padding: 40px 25px;
-
-```
 border: 1px solid rgba(63, 57, 52, 0.15);
-
 background: #fff;
-
 text-align: center;
-
 transition: 0.3s;
-```
-
 }
 
 .event-card:hover {
 transform: translateY(-4px);
-
-```
 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-```
-
 }
 
 .event-title {
 margin: 0 0 20px;
-
-```
 font-size: 10px;
-
 letter-spacing: 3px;
-
 font-weight: 600;
-```
-
 }
 
 .event-card h3 {
 margin: 0 0 12px;
-
-```
 font-size: 27px;
-
 font-weight: 500;
-```
-
 }
 
 .event-time {
 margin: 0 0 20px;
-
-```
 font-size: 12px;
-
 line-height: 1.8;
-
 letter-spacing: 1px;
-```
-
 }
 
 .venue {
 margin: 0;
-
-```
 font-size: 11px;
-
 line-height: 1.8;
-```
-
 }
 
 .venue span {
 font-size: 9px;
-
-```
 opacity: 0.65;
-```
-
 }
 
-/* =========================================
-LOCATION QR
-========================================= */
+/* =========================
+QR PLACEHOLDER
+========================= */
 
 .location-qr {
 margin-top: 25px;
-
-```
 text-align: center;
-```
-
 }
 
 .qr-placeholder {
 width: 120px;
-
-```
 height: 120px;
-
 margin: 0 auto 10px;
-
 border: 1px dashed rgba(63, 57, 52, 0.35);
-
 display: flex;
-
 align-items: center;
-
 justify-content: center;
-
 font-size: 9px;
-
 letter-spacing: 1px;
-
 opacity: 0.7;
-```
-
 }
 
 .location-qr p {
 margin: 0;
-
-```
 font-size: 9px;
-
 letter-spacing: 1.5px;
-
 text-transform: uppercase;
-```
-
 }
 
-/* =========================================
+/* =========================
 OUR STORY
-========================================= */
+========================= */
 
 .story-section {
 margin-top: 100px;
-
-```
 padding: 100px 20px 80px;
-
 text-align: center;
-
 border-top: 1px solid rgba(63, 57, 52, 0.1);
-```
-
+background: #faf8f4;
 }
 
 .story-message {
 max-width: 600px;
-
-```
 margin: 25px auto 45px;
-
 font-size: 13px;
-
 line-height: 1.9;
-```
-
 }
 
-/* =========================================
+/* =========================
 PHOTO SLIDER
-========================================= */
+========================= */
 
 .photo-slider {
 display: flex;
-
-```
 align-items: center;
-
 justify-content: center;
-
 gap: 25px;
-
 max-width: 950px;
-
 margin: 0 auto;
-```
-
 }
 
 .story-photo {
 width: 600px;
-
-```
 max-width: 75vw;
-```
-
 }
 
 .story-photo-placeholder {
 width: 100%;
-
-```
 height: 500px;
-
 border: 1px dashed rgba(63, 57, 52, 0.3);
-
 display: flex;
-
 align-items: center;
-
 justify-content: center;
-
 background: rgba(63, 57, 52, 0.025);
-
 font-size: 10px;
-
 letter-spacing: 2px;
-```
-
 }
 
 .story-photo-image {
 width: 100%;
-
-```
 height: 500px;
-
 object-fit: cover;
-
 display: block;
-```
-
 }
 
-/* =========================================
+/* =========================
 SLIDER ARROWS
-========================================= */
+========================= */
 
 .slider-arrow {
 width: 45px;
-
-```
 height: 45px;
-
 flex-shrink: 0;
-
 border: 1px solid rgba(63, 57, 52, 0.25);
-
 background: transparent;
-
 color: #3f3934;
-
 font-size: 20px;
-
 cursor: pointer;
-
 display: flex;
-
 align-items: center;
-
 justify-content: center;
-
 transition: 0.3s;
-```
-
 }
 
 .slider-arrow:hover {
 background: #3f3934;
-
-```
 color: #fff;
-
 transform: scale(1.05);
-```
-
 }
-
-/* =========================================
-PHOTO COUNTER
-========================================= */
 
 .photo-counter {
 margin-top: 18px;
-
-```
 font-size: 10px;
-
 letter-spacing: 2px;
-
 opacity: 0.65;
-```
-
 }
 
-/* =========================================
+/* =========================
 TABLET
-========================================= */
+========================= */
 
 @media (max-width: 850px) {
 
-```
 .events {
     grid-template-columns: 1fr;
-
     max-width: 550px;
 }
-```
+
 
 }
 
-/* =========================================
+/* =========================
 MOBILE
-========================================= */
+========================= */
 
 @media (max-width: 700px) {
 
-```
 .hero {
     padding: 50px 18px;
 }
@@ -859,18 +500,13 @@ MOBILE
 
 .intro {
     font-size: 13px;
-
     margin: 30px auto;
 }
 
 .date-card {
     min-width: 250px;
-
     padding: 20px 25px;
 }
-
-
-/* Invitation */
 
 .invitation {
     padding: 70px 15px 50px;
@@ -878,18 +514,12 @@ MOBILE
 
 .message {
     margin-bottom: 50px;
-
     font-size: 13px;
 }
 
-
-/* Bride & Groom */
-
 .couple-section {
     flex-direction: column;
-
     gap: 25px;
-
     margin-bottom: 70px;
 }
 
@@ -899,7 +529,6 @@ MOBILE
 
 .photo-placeholder {
     width: 210px;
-
     height: 260px;
 }
 
@@ -911,25 +540,17 @@ MOBILE
     font-size: 35px;
 }
 
-
-/* Events */
-
 .event-card {
     padding: 35px 20px;
 }
 
-
-/* Our Story */
-
 .story-section {
     margin-top: 70px;
-
     padding: 70px 10px 60px;
 }
 
 .story-message {
     margin-bottom: 35px;
-
     font-size: 12px;
 }
 
@@ -948,22 +569,18 @@ MOBILE
 
 .slider-arrow {
     width: 38px;
-
     height: 38px;
-
     font-size: 17px;
 }
-```
 
 }
 
-/* =========================================
+/* =========================
 SMALL MOBILE
-========================================= */
+========================= */
 
 @media (max-width: 420px) {
 
-```
 .hero h1 {
     font-size: 56px;
 }
@@ -987,11 +604,8 @@ SMALL MOBILE
 
 .slider-arrow {
     width: 34px;
-
     height: 34px;
-
     font-size: 15px;
 }
-```
 
 }
