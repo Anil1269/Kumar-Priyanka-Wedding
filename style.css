@@ -13,8 +13,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: #f8f0e7;
-    color: #40362f;
+    background: #f7eee5;
+    color: #40342d;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
@@ -31,7 +31,33 @@ h3 {
 
 
 /* =========================================
-   HERO SECTION
+   COMMON DECORATIVE THREAD
+   ========================================= */
+
+.hero,
+.invitation,
+.story-section,
+.closing-section {
+    position: relative;
+}
+
+
+/* Left and right ornamental threads */
+
+.hero::before,
+.hero::after,
+.invitation::before,
+.invitation::after,
+.story-section::before,
+.story-section::after,
+.closing-section::before,
+.closing-section::after {
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HERO
    ========================================= */
 
 .hero {
@@ -42,58 +68,72 @@ h3 {
     align-items: center;
     justify-content: center;
 
-    position: relative;
     text-align: center;
 
-    padding: 60px 20px;
+    padding: 70px 20px;
 
     background:
         radial-gradient(
-            circle at 50% 35%,
+            circle at center,
             #fffdf9 0%,
-            #f9eee5 38%,
-            #efdcd0 72%,
-            #e5cbbd 100%
+            #faf1e8 48%,
+            #edd9cb 100%
         );
 
     overflow: hidden;
 }
 
 
-/* Soft decorative frame */
+/* Traditional connected side decoration */
 
 .hero::before {
-    content: "";
+    content: "❈\A│\A❖\A│\A❈\A│\A◇\A│\A❈";
+
+    white-space: pre;
+
     position: absolute;
 
-    width: calc(100% - 70px);
-    height: calc(100% - 70px);
+    left: 25px;
+    top: 50%;
 
-    top: 35px;
-    left: 35px;
+    transform: translateY(-50%);
 
-    border: 1px solid rgba(126, 86, 65, 0.12);
+    font-family: 'Cormorant Garamond', serif;
 
-    pointer-events: none;
+    font-size: 20px;
+
+    line-height: 2.3;
+
+    text-align: center;
+
+    color: #a77b62;
+
+    opacity: 0.32;
 }
 
 .hero::after {
-    content: "❦";
+    content: "❈\A│\A❖\A│\A❈\A│\A◇\A│\A❈";
+
+    white-space: pre;
 
     position: absolute;
 
-    bottom: 45px;
-    left: 50%;
+    right: 25px;
+    top: 50%;
 
-    transform: translateX(-50%);
+    transform: translateY(-50%);
 
     font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
 
-    color: #9b7661;
-    opacity: 0.35;
+    font-size: 20px;
 
-    pointer-events: none;
+    line-height: 2.3;
+
+    text-align: center;
+
+    color: #a77b62;
+
+    opacity: 0.32;
 }
 
 
@@ -106,7 +146,8 @@ h3 {
     width: 100%;
 
     position: relative;
-    z-index: 2;
+
+    z-index: 5;
 }
 
 
@@ -118,19 +159,22 @@ h3 {
     position: absolute;
 
     font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
 
-    color: #9b7661;
-    opacity: 0.35;
+    color: #a77b62;
 
-    z-index: 2;
+    opacity: 0.5;
+
+    z-index: 5;
 }
 
 .decor-top {
-    top: 55px;
+    top: 45px;
+
     left: 50%;
 
     transform: translateX(-50%);
+
+    font-size: 25px;
 }
 
 .decor-bottom {
@@ -146,12 +190,14 @@ h3 {
     margin: 0 0 25px;
 
     font-size: 11px;
+
     font-weight: 500;
 
     letter-spacing: 4px;
+
     text-transform: uppercase;
 
-    color: #806354;
+    color: #765b4d;
 }
 
 .ornament {
@@ -159,7 +205,8 @@ h3 {
 
     margin-bottom: 20px;
 
-    color: #9b7661;
+    color: #a77b62;
+
     opacity: 0.7;
 }
 
@@ -172,7 +219,7 @@ h3 {
 
     line-height: 0.9;
 
-    color: #493a32;
+    color: #47382f;
 }
 
 .hero h1 span {
@@ -184,7 +231,7 @@ h3 {
 
     font-style: italic;
 
-    color: #9b7661;
+    color: #a77b62;
 }
 
 .intro {
@@ -196,7 +243,7 @@ h3 {
 
     line-height: 1.9;
 
-    color: #62544c;
+    color: #62534a;
 }
 
 
@@ -222,8 +269,6 @@ h3 {
     border-bottom: 1px solid rgba(126, 86, 65, 0.3);
 
     background: rgba(255, 250, 246, 0.45);
-
-    backdrop-filter: blur(3px);
 }
 
 .day {
@@ -233,7 +278,7 @@ h3 {
 
     margin-bottom: 12px;
 
-    color: #806354;
+    color: #765b4d;
 }
 
 .date {
@@ -251,7 +296,7 @@ h3 {
 
     line-height: 1;
 
-    color: #493a32;
+    color: #47382f;
 }
 
 .date strong {
@@ -279,12 +324,12 @@ h3 {
 
     letter-spacing: 2px;
 
-    color: #806354;
+    color: #765b4d;
 }
 
 
 /* =========================================
-   OPEN INVITATION BUTTON
+   OPEN INVITATION
    ========================================= */
 
 .open-button {
@@ -305,7 +350,7 @@ h3 {
 
     color: #59463b;
 
-    background: rgba(255, 250, 246, 0.6);
+    background: rgba(255, 250, 246, 0.65);
 
     text-decoration: none;
 
@@ -346,16 +391,16 @@ h3 {
 
     letter-spacing: 2px;
 
-    color: #806354;
+    color: #765b4d;
 
-    opacity: 0.65;
+    opacity: 0.6;
 
-    z-index: 2;
+    z-index: 5;
 }
 
 
 /* =========================================
-   INVITATION SECTION
+   INVITATION
    ========================================= */
 
 .invitation {
@@ -363,64 +408,69 @@ h3 {
 
     text-align: center;
 
-    position: relative;
-
     background:
         radial-gradient(
-            circle at 10% 20%,
-            rgba(225, 190, 172, 0.22),
-            transparent 30%
+            circle at 8% 30%,
+            rgba(190, 145, 120, 0.12),
+            transparent 25%
         ),
         radial-gradient(
-            circle at 90% 80%,
-            rgba(211, 179, 160, 0.18),
-            transparent 30%
+            circle at 92% 70%,
+            rgba(190, 145, 120, 0.12),
+            transparent 25%
         ),
-        linear-gradient(
-            180deg,
-            #fffaf6 0%,
-            #f8eee6 50%,
-            #f1e2d7 100%
-        );
+        #f8eee5;
+
+    overflow: hidden;
 }
 
 
-/* Decorative corner effect */
+/* Side thread */
 
 .invitation::before {
-    content: "❦";
+    content: "❈────❖────❈\A          │\A          ❖\A          │\A          ❈";
+
+    white-space: pre;
 
     position: absolute;
 
-    top: 35px;
-    left: 50%;
+    left: 20px;
+    top: 50%;
 
-    transform: translateX(-50%);
+    transform: translateY(-50%);
 
     font-family: 'Cormorant Garamond', serif;
 
-    font-size: 22px;
+    font-size: 14px;
 
-    color: #9b7661;
+    line-height: 2;
 
-    opacity: 0.45;
+    color: #a77b62;
+
+    opacity: 0.22;
 }
 
 .invitation::after {
-    content: "";
+    content: "❈────❖────❈\A          │\A          ❖\A          │\A          ❈";
+
+    white-space: pre;
 
     position: absolute;
 
-    top: 75px;
-    left: 50%;
+    right: 20px;
+    top: 50%;
 
-    width: 70px;
+    transform: translateY(-50%);
 
-    height: 1px;
+    font-family: 'Cormorant Garamond', serif;
 
-    transform: translateX(-50%);
+    font-size: 14px;
 
-    background: rgba(126, 86, 65, 0.25);
+    line-height: 2;
+
+    color: #a77b62;
+
+    opacity: 0.22;
 }
 
 
@@ -433,7 +483,7 @@ h3 {
 
     text-transform: uppercase;
 
-    color: #8a6b59;
+    color: #896956;
 
     opacity: 0.85;
 }
@@ -447,7 +497,7 @@ h3 {
 
     font-weight: 500;
 
-    color: #493a32;
+    color: #493a31;
 }
 
 .invitation h2 span,
@@ -459,7 +509,7 @@ h3 {
 
     margin: 0 8px;
 
-    color: #9b7661;
+    color: #a77b62;
 }
 
 .message {
@@ -471,7 +521,7 @@ h3 {
 
     line-height: 2;
 
-    color: #63554c;
+    color: #63544b;
 }
 
 
@@ -490,6 +540,10 @@ h3 {
     max-width: 900px;
 
     margin: 0 auto 105px;
+
+    position: relative;
+
+    z-index: 3;
 }
 
 .person-card {
@@ -524,7 +578,7 @@ h3 {
     box-shadow:
         0 15px 40px rgba(80, 55, 35, 0.08);
 
-    color: #806354;
+    color: #806453;
 
     font-size: 10px;
 
@@ -538,7 +592,7 @@ h3 {
 
     font-weight: 600;
 
-    color: #493a32;
+    color: #493a31;
 }
 
 .parents {
@@ -554,7 +608,7 @@ h3 {
 .parents strong {
     font-weight: 500;
 
-    color: #493a32;
+    color: #493a31;
 }
 
 .couple-symbol {
@@ -564,7 +618,7 @@ h3 {
 
     font-style: italic;
 
-    color: #9b7661;
+    color: #a77b62;
 }
 
 
@@ -582,6 +636,10 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
+
+    position: relative;
+
+    z-index: 3;
 }
 
 .event-card {
@@ -592,7 +650,7 @@ h3 {
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.88),
+            rgba(255,255,255,0.9),
             rgba(248,236,226,0.9)
         );
 
@@ -611,16 +669,17 @@ h3 {
 
     position: absolute;
 
-    top: 15px;
+    top: 14px;
+
     left: 50%;
 
     transform: translateX(-50%);
 
     font-size: 11px;
 
-    color: #9b7661;
+    color: #a77b62;
 
-    opacity: 0.45;
+    opacity: 0.5;
 }
 
 .event-card:hover {
@@ -639,7 +698,7 @@ h3 {
 
     font-weight: 600;
 
-    color: #806354;
+    color: #806453;
 }
 
 .event-card h3 {
@@ -649,7 +708,7 @@ h3 {
 
     font-weight: 500;
 
-    color: #493a32;
+    color: #493a31;
 }
 
 .event-time {
@@ -661,7 +720,7 @@ h3 {
 
     letter-spacing: 1px;
 
-    color: #725d50;
+    color: #725c4e;
 }
 
 .venue {
@@ -682,7 +741,7 @@ h3 {
 
 
 /* =========================================
-   LOCATION QR
+   QR
    ========================================= */
 
 .location-qr {
@@ -714,7 +773,7 @@ h3 {
             transparent 6px
         );
 
-    color: #806354;
+    color: #806453;
 
     font-size: 9px;
 
@@ -730,7 +789,7 @@ h3 {
 
     text-transform: uppercase;
 
-    color: #806354;
+    color: #806453;
 }
 
 
@@ -739,53 +798,70 @@ h3 {
    ========================================= */
 
 .story-section {
-    margin-top: 0;
-
     padding: 110px 20px 100px;
 
     text-align: center;
 
-    position: relative;
-
     background:
         radial-gradient(
-            circle at 15% 30%,
-            rgba(219, 181, 162, 0.2),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 85% 70%,
-            rgba(211, 177, 157, 0.2),
-            transparent 28%
-        ),
-        linear-gradient(
-            135deg,
-            #f8eee6 0%,
-            #fffaf6 50%,
-            #f0e1d6 100%
+            circle at 50% 50%,
+            #fffaf6 0%,
+            #f5e7dd 55%,
+            #ead5c8 100%
         );
 
     border-top: 1px solid rgba(126, 86, 65, 0.15);
+
+    overflow: hidden;
 }
 
+
+/* Connected side decoration */
+
 .story-section::before {
-    content: "❦";
+    content: "❈\A│\A❖\A│\A❈\A────❖";
+
+    white-space: pre;
 
     position: absolute;
 
-    top: 35px;
+    left: 25px;
+    top: 50%;
 
-    left: 50%;
-
-    transform: translateX(-50%);
+    transform: translateY(-50%);
 
     font-family: 'Cormorant Garamond', serif;
 
-    font-size: 22px;
+    font-size: 17px;
 
-    color: #9b7661;
+    line-height: 2.2;
 
-    opacity: 0.45;
+    color: #a77b62;
+
+    opacity: 0.25;
+}
+
+.story-section::after {
+    content: "❈\A│\A❖\A│\A❈\A────❖";
+
+    white-space: pre;
+
+    position: absolute;
+
+    right: 25px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 17px;
+
+    line-height: 2.2;
+
+    color: #a77b62;
+
+    opacity: 0.25;
 }
 
 .story-message {
@@ -816,6 +892,10 @@ h3 {
     max-width: 950px;
 
     margin: 0 auto;
+
+    position: relative;
+
+    z-index: 5;
 }
 
 .story-photo {
@@ -845,7 +925,7 @@ h3 {
             rgba(225,202,188,0.4)
         );
 
-    color: #806354;
+    color: #806453;
 
     font-size: 10px;
 
@@ -881,7 +961,7 @@ h3 {
 
     border: 1px solid rgba(126, 86, 65, 0.35);
 
-    background: rgba(255, 250, 246, 0.65);
+    background: rgba(255, 250, 246, 0.75);
 
     color: #5b493e;
 
@@ -898,7 +978,7 @@ h3 {
 
     position: relative;
 
-    z-index: 5;
+    z-index: 10;
 }
 
 .slider-arrow:hover {
@@ -921,7 +1001,7 @@ h3 {
 
     letter-spacing: 2px;
 
-    color: #806354;
+    color: #806453;
 
     opacity: 0.7;
 }
@@ -932,9 +1012,7 @@ h3 {
    ========================================= */
 
 .closing-section {
-    position: relative;
-
-    padding: 120px 25px;
+    padding: 115px 25px;
 
     text-align: center;
 
@@ -942,8 +1020,8 @@ h3 {
         radial-gradient(
             circle at center,
             #fffaf6 0%,
-            #f2e1d6 60%,
-            #e5cbbd 100%
+            #f3e3d9 60%,
+            #e7cfc1 100%
         );
 
     border-top: 1px solid rgba(126, 86, 65, 0.15);
@@ -957,25 +1035,33 @@ h3 {
 
     font-family: 'Cormorant Garamond', serif;
 
-    font-size: 45px;
+    color: #a77b62;
 
-    color: #9b7661;
-
-    opacity: 0.18;
+    opacity: 0.25;
 }
 
 .closing-section::before {
-    content: "❦";
+    content: "❈────❖────❈";
 
     top: 45px;
-    left: 12%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 18px;
 }
 
 .closing-section::after {
-    content: "❦";
+    content: "❈────❖────❈";
 
     bottom: 45px;
-    right: 12%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 18px;
 }
 
 .closing-section h2 {
@@ -987,7 +1073,7 @@ h3 {
 
     line-height: 1;
 
-    color: #493a32;
+    color: #493a31;
 }
 
 .closing-message {
@@ -1018,6 +1104,18 @@ h3 {
     .couple-section {
         gap: 25px;
     }
+
+    .hero::before,
+    .hero::after {
+        opacity: 0.22;
+    }
+
+    .invitation::before,
+    .invitation::after,
+    .story-section::before,
+    .story-section::after {
+        opacity: 0.15;
+    }
 }
 
 
@@ -1032,11 +1130,13 @@ h3 {
     }
 
     .hero::before {
-        width: calc(100% - 35px);
-        height: calc(100% - 35px);
+        left: 5px;
+        font-size: 15px;
+    }
 
-        top: 17px;
-        left: 17px;
+    .hero::after {
+        right: 5px;
+        font-size: 15px;
     }
 
     .hero h1 {
@@ -1060,6 +1160,16 @@ h3 {
 
     .invitation {
         padding: 80px 15px 75px;
+    }
+
+    .invitation::before {
+        left: 3px;
+        font-size: 11px;
+    }
+
+    .invitation::after {
+        right: 3px;
+        font-size: 11px;
     }
 
     .message {
@@ -1111,6 +1221,16 @@ h3 {
         padding: 80px 10px 65px;
     }
 
+    .story-section::before {
+        left: 2px;
+        font-size: 12px;
+    }
+
+    .story-section::after {
+        right: 2px;
+        font-size: 12px;
+    }
+
     .story-message {
         margin-bottom: 35px;
 
@@ -1145,12 +1265,9 @@ h3 {
         padding: 90px 20px;
     }
 
-    .closing-section::before {
-        left: 7%;
-    }
-
+    .closing-section::before,
     .closing-section::after {
-        right: 7%;
+        font-size: 13px;
     }
 
     .closing-message {
@@ -1177,6 +1294,11 @@ h3 {
         font-size: 48px;
     }
 
+    .hero::before,
+    .hero::after {
+        font-size: 12px;
+    }
+
     .story-photo {
         max-width: 70vw;
     }
@@ -1192,10 +1314,5 @@ h3 {
         height: 34px;
 
         font-size: 15px;
-    }
-
-    .closing-section::before,
-    .closing-section::after {
-        font-size: 32px;
     }
 }
